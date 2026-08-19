@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Use AquaAI to explore prototype waterborne disease risk predictions using environmental and health-surveillance indicators."
+    >
+
+    <title>AquaAI Lab | AquaSentinel AI</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="AquaSentinel home"
+            >
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html" class="active">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="ai-lab-page">
+        <!-- Breadcrumb -->
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <strong>AquaAI Lab</strong>
+        </nav>
+
+        <!-- Hero -->
+        <section class="ai-lab-hero">
+            <div class="ai-lab-hero-content">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Explainable prototype intelligence
+                </div>
+
+                <p class="eyebrow">
+                    ENVIRONMENT + HEALTH + AI
+                </p>
+
+                <h1>
+                    Explore Risk with
+                    <span>AquaAI Intelligence</span>
+                </h1>
+
+                <p>
+                    Enter environmental and community health indicators
+                    to generate an explainable prototype waterborne
+                    disease-risk assessment.
+                </p>
+
+                <div class="ai-lab-hero-actions">
+                    <a href="#riskPredictor" class="primary-button">
+                        Start Risk Analysis
+                    </a>
+
+                    <a href="risk-map.html" class="secondary-button">
+                        View Regional Map
+                    </a>
+                </div>
+
+                <div class="ai-lab-hero-tags">
+                    <span>B1 environmental analysis</span>
+                    <span>B2 health surveillance</span>
+                    <span>Risk fusion</span>
+                    <span>Explainable result</span>
+                </div>
+            </div>
+
+            <div class="ai-lab-hero-visual">
+                <div class="ai-core-visual">
+                    <span>AI</span>
+                    <strong>AquaAI</strong>
+                    <small>Risk Intelligence Engine</small>
+                </div>
+
+                <div class="ai-orbit ai-orbit-one"></div>
+                <div class="ai-orbit ai-orbit-two"></div>
+
+                <div class="ai-data-node ai-node-environment">
+                    <span>B1</span>
+
+                    <div>
+                        <strong>Environment</strong>
+                        <small>Water and weather</small>
+                    </div>
+                </div>
+
+                <div class="ai-data-node ai-node-health">
+                    <span>B2</span>
+
+                    <div>
+                        <strong>Health</strong>
+                        <small>Community signals</small>
+                    </div>
+                </div>
+
+                <div class="ai-data-node ai-node-result">
+                    <span>R</span>
+
+                    <div>
+                        <strong>Risk Fusion</strong>
+                        <small>Explainable result</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI feature summary -->
+        <section class="ai-capability-section">
+            <article>
+                <div class="ai-capability-icon capability-water">B1</div>
+
+                <div>
+                    <span>Environmental intelligence</span>
+                    <strong>Water and climate analysis</strong>
+                    <small>
+                        Rainfall, temperature, turbidity, pH and sanitation
+                    </small>
+                </div>
+            </article>
+
+            <article>
+                <div class="ai-capability-icon capability-health">B2</div>
+
+                <div>
+                    <span>Health intelligence</span>
+                    <strong>Community surveillance</strong>
+                    <small>
+                        Symptoms, case trends and affected population
+                    </small>
+                </div>
+            </article>
+
+            <article>
+                <div class="ai-capability-icon capability-fusion">AI</div>
+
+                <div>
+                    <span>Risk intelligence</span>
+                    <strong>Explainable risk fusion</strong>
+                    <small>
+                        Transparent scoring and recommended monitoring
+                    </small>
+                </div>
+            </article>
+        </section>
+
+        <!-- Predictor -->
+        <section
+            class="ai-predictor-section"
+            id="riskPredictor"
+        >
+            <div class="ai-predictor-heading">
+                <div>
+                    <p class="eyebrow">INTERACTIVE PROTOTYPE</p>
+
+                    <h2>Waterborne Disease Risk Predictor</h2>
+
+                    <p>
+                        Complete the environmental and surveillance
+                        indicators to calculate a prototype risk profile.
+                    </p>
+                </div>
+
+                <div class="ai-model-status">
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <small>Prototype model</small>
+                        <strong>Ready for analysis</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-predictor-layout">
+                <!-- Predictor form -->
+                <form
+                    class="ai-predictor-form"
+                    id="riskPredictorForm"
+                >
+                    <!-- Location -->
+                    <fieldset class="ai-form-section">
+                        <legend>
+                            <span>01</span>
+                            Location and monitoring profile
+                        </legend>
+
+                        <div class="ai-form-grid">
+                            <div class="ai-form-control">
+                                <label for="predictionState">
+                                    Northeast state
+                                </label>
+
+                                <select
+                                    id="predictionState"
+                                    name="state"
+                                    required
+                                >
+                                    <option value="">
+                                        Select a state
+                                    </option>
+
+                                    <option value="Arunachal Pradesh">
+                                        Arunachal Pradesh
+                                    </option>
+
+                                    <option value="Assam">
+                                        Assam
+                                    </option>
+
+                                    <option value="Manipur">
+                                        Manipur
+                                    </option>
+
+                                    <option value="Meghalaya">
+                                        Meghalaya
+                                    </option>
+
+                                    <option value="Mizoram">
+                                        Mizoram
+                                    </option>
+
+                                    <option value="Nagaland">
+                                        Nagaland
+                                    </option>
+
+                                    <option value="Sikkim">
+                                        Sikkim
+                                    </option>
+
+                                    <option value="Tripura">
+                                        Tripura
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <label for="predictionDistrict">
+                                    District or monitoring location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="predictionDistrict"
+                                    name="district"
+                                    placeholder="Example: Kamrup Metropolitan"
+                                    maxlength="80"
+                                    required
+                                >
+                            </div>
+
+                            <div class="ai-form-control">
+                                <label for="monitoringPeriod">
+                                    Monitoring period
+                                </label>
+
+                                <select
+                                    id="monitoringPeriod"
+                                    name="period"
+                                >
+                                    <option value="24 hours">
+                                        Last 24 hours
+                                    </option>
+
+                                    <option value="3 days">
+                                        Last 3 days
+                                    </option>
+
+                                    <option value="7 days" selected>
+                                        Last 7 days
+                                    </option>
+
+                                    <option value="14 days">
+                                        Last 14 days
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Environmental inputs -->
+                    <fieldset class="ai-form-section environment-form-section">
+                        <legend>
+                            <span>B1</span>
+                            Environmental and water indicators
+                        </legend>
+
+                        <div class="ai-form-grid two-column-grid">
+                            <div class="ai-form-control">
+                                <div class="range-label">
+                                    <label for="rainfallInput">
+                                        Recent rainfall
+                                    </label>
+
+                                    <output id="rainfallValue">
+                                        120 mm
+                                    </output>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    id="rainfallInput"
+                                    name="rainfall"
+                                    min="0"
+                                    max="400"
+                                    value="120"
+                                    step="5"
+                                >
+
+                                <div class="range-scale">
+                                    <span>0 mm</span>
+                                    <span>400 mm</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <div class="range-label">
+                                    <label for="temperatureInput">
+                                        Average temperature
+                                    </label>
+
+                                    <output id="temperatureValue">
+                                        28°C
+                                    </output>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    id="temperatureInput"
+                                    name="temperature"
+                                    min="5"
+                                    max="45"
+                                    value="28"
+                                    step="1"
+                                >
+
+                                <div class="range-scale">
+                                    <span>5°C</span>
+                                    <span>45°C</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <div class="range-label">
+                                    <label for="turbidityInput">
+                                        Water turbidity
+                                    </label>
+
+                                    <output id="turbidityValue">
+                                        8 NTU
+                                    </output>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    id="turbidityInput"
+                                    name="turbidity"
+                                    min="0"
+                                    max="50"
+                                    value="8"
+                                    step="1"
+                                >
+
+                                <div class="range-scale">
+                                    <span>Clear</span>
+                                    <span>Highly turbid</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <div class="range-label">
+                                    <label for="phInput">
+                                        Water pH
+                                    </label>
+
+                                    <output id="phValue">
+                                        7.0
+                                    </output>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    id="phInput"
+                                    name="ph"
+                                    min="3"
+                                    max="11"
+                                    value="7"
+                                    step="0.1"
+                                >
+
+                                <div class="range-scale">
+                                    <span>Acidic</span>
+                                    <span>Alkaline</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <label for="waterSourceInput">
+                                    Primary water source
+                                </label>
+
+                                <select
+                                    id="waterSourceInput"
+                                    name="waterSource"
+                                >
+                                    <option value="treated">
+                                        Treated piped water
+                                    </option>
+
+                                    <option value="well">
+                                        Well or borewell
+                                    </option>
+
+                                    <option value="spring">
+                                        Spring water
+                                    </option>
+
+                                    <option value="river">
+                                        River or surface water
+                                    </option>
+
+                                    <option value="stored">
+                                        Stored household water
+                                    </option>
+
+                                    <option value="unknown">
+                                        Unknown or mixed source
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <label for="sanitationInput">
+                                    Sanitation condition
+                                </label>
+
+                                <select
+                                    id="sanitationInput"
+                                    name="sanitation"
+                                >
+                                    <option value="good">
+                                        Good
+                                    </option>
+
+                                    <option value="adequate">
+                                        Adequate
+                                    </option>
+
+                                    <option value="poor">
+                                        Poor
+                                    </option>
+
+                                    <option value="critical">
+                                        Critical
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="ai-form-control checkbox-control">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        id="floodingInput"
+                                        name="flooding"
+                                    >
+
+                                    <span>
+                                        Recent flooding or waterlogging
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="ai-form-control checkbox-control">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        id="contaminationInput"
+                                        name="contamination"
+                                    >
+
+                                    <span>
+                                        Suspected water contamination
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Health inputs -->
+                    <fieldset class="ai-form-section health-form-section">
+                        <legend>
+                            <span>B2</span>
+                            Community health-surveillance indicators
+                        </legend>
+
+                        <div class="ai-form-grid two-column-grid">
+                            <div class="ai-form-control">
+                                <div class="range-label">
+                                    <label for="reportedCasesInput">
+                                        Reported symptomatic cases
+                                    </label>
+
+                                    <output id="reportedCasesValue">
+                                        12
+                                    </output>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    id="reportedCasesInput"
+                                    name="reportedCases"
+                                    min="0"
+                                    max="200"
+                                    value="12"
+                                    step="1"
+                                >
+
+                                <div class="range-scale">
+                                    <span>0 cases</span>
+                                    <span>200 cases</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <div class="range-label">
+                                    <label for="caseIncreaseInput">
+                                        Case increase
+                                    </label>
+
+                                    <output id="caseIncreaseValue">
+                                        15%
+                                    </output>
+                                </div>
+
+                                <input
+                                    type="range"
+                                    id="caseIncreaseInput"
+                                    name="caseIncrease"
+                                    min="0"
+                                    max="100"
+                                    value="15"
+                                    step="1"
+                                >
+
+                                <div class="range-scale">
+                                    <span>No increase</span>
+                                    <span>100% increase</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <label for="symptomInput">
+                                    Primary symptom pattern
+                                </label>
+
+                                <select
+                                    id="symptomInput"
+                                    name="symptom"
+                                >
+                                    <option value="none">
+                                        No unusual symptoms
+                                    </option>
+
+                                    <option value="diarrhoea">
+                                        Diarrhoea and dehydration
+                                    </option>
+
+                                    <option value="vomiting">
+                                        Vomiting and stomach pain
+                                    </option>
+
+                                    <option value="fever">
+                                        Fever and weakness
+                                    </option>
+
+                                    <option value="jaundice">
+                                        Jaundice-related symptoms
+                                    </option>
+
+                                    <option value="mixed">
+                                        Mixed gastrointestinal symptoms
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="ai-form-control">
+                                <label for="populationInput">
+                                    Population potentially exposed
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="populationInput"
+                                    name="population"
+                                    min="0"
+                                    max="1000000"
+                                    value="5000"
+                                    step="100"
+                                >
+                            </div>
+
+                            <div class="ai-form-control checkbox-control">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        id="clusterInput"
+                                        name="cluster"
+                                    >
+
+                                    <span>
+                                        Cases appear geographically clustered
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="ai-form-control checkbox-control">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        id="vulnerableInput"
+                                        name="vulnerable"
+                                    >
+
+                                    <span>
+                                        Vulnerable population significantly affected
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="ai-form-notice">
+                        <span>i</span>
+
+                        <p>
+                            This frontend predictor is a transparent
+                            demonstration model. It will later connect to
+                            the trained backend AI model through an API.
+                        </p>
+                    </div>
+
+                    <div class="ai-form-actions">
+                        <button
+                            type="reset"
+                            class="secondary-button"
+                            id="resetPredictionButton"
+                        >
+                            Reset Inputs
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="primary-button ai-analyse-button"
+                        >
+                            <span>AI</span>
+                            Generate Risk Assessment
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Result panel -->
+                <aside class="ai-result-panel" id="aiResultPanel">
+                    <div
+                        class="ai-result-placeholder"
+                        id="aiResultPlaceholder"
+                    >
+                        <div class="result-placeholder-icon">AI</div>
+
+                        <h3>Your assessment will appear here</h3>
+
+                        <p>
+                            Complete the monitoring inputs and select
+                            Generate Risk Assessment.
+                        </p>
+
+                        <div class="placeholder-data-flow">
+                            <span>B1</span>
+                            <i>+</i>
+                            <span>B2</span>
+                            <i>→</i>
+                            <span>Risk</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="ai-result-content"
+                        id="aiResultContent"
+                        hidden
+                    >
+                        <div class="ai-result-heading">
+                            <div>
+                                <span class="panel-label">
+                                    AQUAAI ASSESSMENT
+                                </span>
+
+                                <h3 id="resultLocation">
+                                    Selected location
+                                </h3>
+                            </div>
+
+                            <span
+                                class="ai-result-risk-badge"
+                                id="resultRiskBadge"
+                            >
+                                Moderate
+                            </span>
+                        </div>
+
+                        <div class="ai-result-score-section">
+                            <div
+                                class="ai-result-score"
+                                id="resultRiskScore"
+                            >
+                                00
+                            </div>
+
+                            <div>
+                                <span>Combined risk score</span>
+
+                                <strong id="resultRiskMessage">
+                                    Analysis completed
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="ai-result-component-grid">
+                            <article>
+                                <span>B1 Environmental</span>
+                                <strong id="resultEnvironmentScore">
+                                    00%
+                                </strong>
+                            </article>
+
+                            <article>
+                                <span>B2 Health signal</span>
+                                <strong id="resultHealthScore">
+                                    00%
+                                </strong>
+                            </article>
+
+                            <article>
+                                <span>Likely concern</span>
+                                <strong id="resultDisease">
+                                    Monitoring
+                                </strong>
+                            </article>
+
+                            <article>
+                                <span>Priority</span>
+                                <strong id="resultPriority">
+                                    Routine
+                                </strong>
+                            </article>
+                        </div>
+
+                        <div class="ai-result-progress-group">
+                            <div>
+                                <span>Environmental contribution</span>
+                                <strong id="resultEnvironmentText">
+                                    00%
+                                </strong>
+                            </div>
+
+                            <div class="ai-result-progress">
+                                <span id="resultEnvironmentBar"></span>
+                            </div>
+                        </div>
+
+                        <div class="ai-result-progress-group">
+                            <div>
+                                <span>Health contribution</span>
+                                <strong id="resultHealthText">
+                                    00%
+                                </strong>
+                            </div>
+
+                            <div
+                                class="ai-result-progress health-result-progress"
+                            >
+                                <span id="resultHealthBar"></span>
+                            </div>
+                        </div>
+
+                        <div class="ai-explanation-result">
+                            <div>
+                                <span>AI</span>
+
+                                <strong>
+                                    Explainable Assessment
+                                </strong>
+                            </div>
+
+                            <p id="resultExplanation">
+                                Explanation will appear here.
+                            </p>
+                        </div>
+
+                        <div class="ai-recommendation-result">
+                            <span>Recommended monitoring action</span>
+
+                            <p id="resultRecommendation">
+                                Recommendation will appear here.
+                            </p>
+                        </div>
+
+                        <div class="ai-result-actions">
+                            <a
+                                href="risk-map.html"
+                                class="secondary-button"
+                            >
+                                Open Risk Map
+                            </a>
+
+                            <a
+                                href="report.html"
+                                class="primary-button"
+                            >
+                                Report Concern
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Prediction history -->
+        <section class="ai-history-section">
+            <div class="section-heading">
+                <p class="eyebrow">RECENT ASSESSMENTS</p>
+
+                <h2>Prototype prediction history</h2>
+
+                <p>
+                    Recent assessments are stored only in your browser
+                    for demonstration.
+                </p>
+            </div>
+
+            <div class="ai-history-toolbar">
+                <p>
+                    <strong id="historyCount">0</strong>
+                    saved assessments
+                </p>
+
+                <button
+                    type="button"
+                    id="clearHistoryButton"
+                    class="secondary-button"
+                >
+                    Clear History
+                </button>
+            </div>
+
+            <div class="ai-history-grid" id="predictionHistory"></div>
+
+            <div
+                class="ai-history-empty"
+                id="historyEmptyState"
+            >
+                <span>AI</span>
+                <h3>No assessments yet</h3>
+
+                <p>
+                    Your completed prototype assessments will appear here.
+                </p>
+            </div>
+        </section>
+
+        <!-- Model explanation -->
+        <section class="ai-method-section">
+            <div class="ai-method-image">
+                <div>
+                    <span>Explainable Intelligence</span>
+                    <strong>
+                        Designed to support human decision-making.
+                    </strong>
+                </div>
+            </div>
+
+            <div class="ai-method-content">
+                <p class="eyebrow">
+                    HOW AQUAAI WORKS
+                </p>
+
+                <h2>Transparent risk fusion</h2>
+
+                <p>
+                    AquaAI keeps environmental and health-surveillance
+                    contributions visible instead of presenting an
+                    unexplained result.
+                </p>
+
+                <div class="ai-method-steps">
+                    <article>
+                        <span>B1</span>
+
+                        <div>
+                            <h3>Environmental score</h3>
+
+                            <p>
+                                Evaluates water, weather, flooding and
+                                sanitation indicators.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>B2</span>
+
+                        <div>
+                            <h3>Health-surveillance score</h3>
+
+                            <p>
+                                Evaluates reported cases, trends, symptoms
+                                and population exposure.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>AI</span>
+
+                        <div>
+                            <h3>Combined interpretation</h3>
+
+                            <p>
+                                Produces a risk category, explanation and
+                                recommended monitoring response.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="prototype-notice-section">
+            <div class="prototype-notice">
+                <span class="notice-icon">i</span>
+
+                <div>
+                    <h2>Prototype AI demonstration</h2>
+
+                    <p>
+                        This frontend predictor is not a trained medical
+                        model and does not provide diagnosis. Results must
+                        not replace laboratory testing, medical advice or
+                        official public-health assessment.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence for safer water and
+                    healthier communities across Northeast India.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Platform</h3>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Smart health intelligence for safer communities.
+            </p>
+
+            <p>Prototype project · English interface</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="ai-lab.js?v=1"></script>
+</body>
+</html>

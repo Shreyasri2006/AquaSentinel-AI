@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Detailed prototype waterborne disease warning and recommended monitoring actions."
+    >
+
+    <title>Alert Details | AquaSentinel AI</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="AquaSentinel home"
+            >
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html" class="active">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="alert-details-page">
+        <!-- Breadcrumb -->
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <a href="alerts.html">Health Alerts</a>
+            <span>›</span>
+            <strong id="alertBreadcrumb">
+                Alert Details
+            </strong>
+        </nav>
+
+        <!-- Alert heading -->
+        <section class="alert-details-hero">
+            <div class="alert-details-content">
+                <a href="alerts.html" class="back-to-map-link">
+                    <span>←</span>
+                    Back to Alerts
+                </a>
+
+                <div class="alert-details-labels">
+                    <span
+                        class="alert-card-severity severity-critical"
+                        id="detailSeverityBadge"
+                    >
+                        Loading
+                    </span>
+
+                    <span
+                        class="alert-status status-active"
+                        id="detailStatusBadge"
+                    >
+                        Loading
+                    </span>
+                </div>
+
+                <p class="eyebrow">
+                    REGIONAL EARLY-WARNING PROFILE
+                </p>
+
+                <h1 id="detailAlertTitle">
+                    Preparing alert details...
+                </h1>
+
+                <p id="detailAlertDescription">
+                    Loading environmental and health-surveillance
+                    information for this prototype alert.
+                </p>
+
+                <div class="alert-detail-location">
+                    <span class="location-symbol">⌖</span>
+
+                    <div>
+                        <small>Monitoring location</small>
+
+                        <strong id="detailLocation">
+                            Loading location...
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="alert-details-actions">
+                    <a
+                        href="risk-map.html"
+                        class="primary-button"
+                        id="detailRiskMapLink"
+                    >
+                        View State Risk Map
+                    </a>
+
+                    <a href="report.html" class="secondary-button">
+                        Report Related Concern
+                    </a>
+                </div>
+            </div>
+
+            <!-- Priority score -->
+            <div class="alert-priority-panel">
+                <div class="alert-priority-heading">
+                    <div>
+                        <span>Prototype alert</span>
+                        <h2>Priority Assessment</h2>
+                    </div>
+
+                    <span class="prototype-label">
+                        DEMONSTRATION
+                    </span>
+                </div>
+
+                <div class="alert-priority-score">
+                    <div
+                        class="priority-score-circle"
+                        id="detailPriorityScore"
+                    >
+                        --
+                    </div>
+
+                    <div>
+                        <span>Risk score out of 100</span>
+
+                        <strong id="detailPriorityMessage">
+                            Preparing classification
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="alert-priority-progress">
+                    <div class="score-progress-labels">
+                        <span>Low</span>
+                        <span>Moderate</span>
+                        <span>High</span>
+                        <span>Critical</span>
+                    </div>
+
+                    <div class="score-progress-track">
+                        <span id="detailPriorityBar"></span>
+                    </div>
+                </div>
+
+                <div class="alert-reference-grid">
+                    <span>
+                        Alert reference
+                        <strong id="detailAlertId">Loading</strong>
+                    </span>
+
+                    <span>
+                        Issued
+                        <strong id="detailAlertDate">Loading</strong>
+                    </span>
+
+                    <span>
+                        Disease signal
+                        <strong id="detailDisease">Loading</strong>
+                    </span>
+
+                    <span>
+                        Current status
+                        <strong id="detailStatusText">Loading</strong>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary metrics -->
+        <section class="alert-detail-metrics">
+            <article class="alert-detail-metric metric-environment">
+                <div class="metric-icon">B1</div>
+
+                <div>
+                    <span>Environmental contribution</span>
+                    <strong id="detailEnvironmentScore">--%</strong>
+                    <small>Water and environmental indicators</small>
+                </div>
+            </article>
+
+            <article class="alert-detail-metric metric-health">
+                <div class="metric-icon">B2</div>
+
+                <div>
+                    <span>Health contribution</span>
+                    <strong id="detailHealthScore">--%</strong>
+                    <small>Community surveillance indicators</small>
+                </div>
+            </article>
+
+            <article class="alert-detail-metric metric-disease">
+                <div class="metric-icon">+</div>
+
+                <div>
+                    <span>Disease signal</span>
+                    <strong id="detailDiseaseMetric">Loading</strong>
+                    <small>Prototype classification</small>
+                </div>
+            </article>
+
+            <article class="alert-detail-metric metric-trend">
+                <div class="metric-icon">↗</div>
+
+                <div>
+                    <span>Monitoring status</span>
+                    <strong id="detailMonitoringStatus">
+                        Loading
+                    </strong>
+                    <small>Current prototype workflow</small>
+                </div>
+            </article>
+        </section>
+
+        <!-- Main analysis -->
+        <section class="alert-analysis-layout">
+            <div class="alert-analysis-main">
+                <!-- Signal analysis -->
+                <article class="alert-analysis-card">
+                    <div class="analysis-panel-heading">
+                        <div>
+                            <p class="eyebrow">
+                                SIGNAL ANALYSIS
+                            </p>
+
+                            <h2>
+                                Why this alert was generated
+                            </h2>
+                        </div>
+
+                        <span class="prototype-label">
+                            PROTOTYPE
+                        </span>
+                    </div>
+
+                    <p
+                        class="alert-analysis-introduction"
+                        id="detailExplanation"
+                    >
+                        AquaAI is preparing an explanation of the
+                        environmental and health indicators associated
+                        with this alert.
+                    </p>
+
+                    <div class="alert-signal-progress">
+                        <div class="detailed-progress-heading">
+                            <div>
+                                <strong>
+                                    B1 Environmental signal
+                                </strong>
+
+                                <span>
+                                    Water quality, rainfall and sanitation
+                                </span>
+                            </div>
+
+                            <strong id="detailEnvironmentPercentage">
+                                --%
+                            </strong>
+                        </div>
+
+                        <div class="detailed-progress-track">
+                            <span id="detailEnvironmentBar"></span>
+                        </div>
+                    </div>
+
+                    <div class="alert-signal-progress">
+                        <div class="detailed-progress-heading">
+                            <div>
+                                <strong>
+                                    B2 Health-surveillance signal
+                                </strong>
+
+                                <span>
+                                    Symptoms and community reports
+                                </span>
+                            </div>
+
+                            <strong id="detailHealthPercentage">
+                                --%
+                            </strong>
+                        </div>
+
+                        <div
+                            class="detailed-progress-track health-detail-track"
+                        >
+                            <span id="detailHealthBar"></span>
+                        </div>
+                    </div>
+
+                    <div class="alert-factor-grid">
+                        <article>
+                            <span>Environmental pressure</span>
+                            <strong id="detailEnvironmentLevel">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Health-signal pressure</span>
+                            <strong id="detailHealthLevel">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Verification priority</span>
+                            <strong id="detailVerificationPriority">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Data classification</span>
+                            <strong>Prototype only</strong>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- AI interpretation -->
+                <article class="alert-analysis-card alert-ai-card">
+                    <div class="ai-explanation-heading">
+                        <span class="ai-explanation-icon">AI</span>
+
+                        <div>
+                            <p class="eyebrow">
+                                AQUAAI INTERPRETATION
+                            </p>
+
+                            <h2>
+                                Explainable warning intelligence
+                            </h2>
+                        </div>
+                    </div>
+
+                    <p id="detailAIExplanation">
+                        Preparing an explainable prototype interpretation.
+                    </p>
+
+                    <div class="alert-ai-summary">
+                        <article>
+                            <span>Primary driver</span>
+                            <strong id="detailPrimaryDriver">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Recommended response</span>
+                            <strong id="detailResponseLevel">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Confidence</span>
+                            <strong>Demonstration only</strong>
+                        </article>
+                    </div>
+
+                    <a href="ai-lab.html" class="primary-button">
+                        Open AquaAI Lab
+                    </a>
+                </article>
+
+                <!-- Timeline -->
+                <article class="alert-analysis-card">
+                    <div class="analysis-panel-heading">
+                        <div>
+                            <p class="eyebrow">
+                                MONITORING WORKFLOW
+                            </p>
+
+                            <h2>Alert activity timeline</h2>
+                        </div>
+                    </div>
+
+                    <div class="alert-timeline">
+                        <article class="timeline-item completed">
+                            <span class="timeline-marker">✓</span>
+
+                            <div>
+                                <small>Stage 01</small>
+                                <h3>Signal detected</h3>
+
+                                <p>
+                                    Environmental or health indicators
+                                    moved outside the expected prototype
+                                    monitoring range.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item completed">
+                            <span class="timeline-marker">✓</span>
+
+                            <div>
+                                <small>Stage 02</small>
+                                <h3>Risk classified</h3>
+
+                                <p id="detailTimelineClassification">
+                                    The signal received a prototype
+                                    severity classification.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item current">
+                            <span class="timeline-marker">3</span>
+
+                            <div>
+                                <small>Stage 03</small>
+                                <h3 id="detailCurrentStage">
+                                    Monitoring review
+                                </h3>
+
+                                <p>
+                                    The alert remains available for
+                                    verification and authorised review.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <span class="timeline-marker">4</span>
+
+                            <div>
+                                <small>Stage 04</small>
+                                <h3>Community response</h3>
+
+                                <p>
+                                    Verified information can support
+                                    appropriate monitoring and safety
+                                    communication.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Recommendations -->
+            <aside class="alert-action-sidebar">
+                <article class="alert-sidebar-card response-card">
+                    <span class="sidebar-card-label">
+                        RECOMMENDED RESPONSE
+                    </span>
+
+                    <h2 id="detailResponseTitle">
+                        Monitoring action
+                    </h2>
+
+                    <p id="detailRecommendedAction">
+                        Preparing a recommended response for this
+                        prototype alert.
+                    </p>
+
+                    <a href="report.html" class="primary-button">
+                        Submit Community Report
+                    </a>
+                </article>
+
+                <article class="alert-sidebar-card safety-card">
+                    <span class="sidebar-card-label">
+                        COMMUNITY PRECAUTIONS
+                    </span>
+
+                    <h2>Essential safety actions</h2>
+
+                    <ul>
+                        <li>
+                            Use treated, boiled or verified drinking water.
+                        </li>
+
+                        <li>
+                            Wash hands regularly with soap and safe water.
+                        </li>
+
+                        <li>
+                            Maintain safe food preparation and storage.
+                        </li>
+
+                        <li>
+                            Seek medical care for persistent symptoms.
+                        </li>
+
+                        <li>
+                            Follow verified local health instructions.
+                        </li>
+                    </ul>
+
+                    <a href="awareness.html">
+                        View complete prevention guidance →
+                    </a>
+                </article>
+
+                <article class="alert-sidebar-card location-card">
+                    <span class="sidebar-card-label">
+                        REGIONAL PROFILE
+                    </span>
+
+                    <h2 id="detailSidebarState">
+                        Loading state...
+                    </h2>
+
+                    <p>
+                        Review the selected state’s complete environmental
+                        and health-surveillance profile.
+                    </p>
+
+                    <a
+                        href="state-details.html"
+                        id="detailStateProfileLink"
+                    >
+                        Open state profile →
+                    </a>
+                </article>
+
+                <article class="alert-sidebar-card disclaimer-card">
+                    <span class="sidebar-card-label">
+                        IMPORTANT NOTICE
+                    </span>
+
+                    <h2>Demonstration only</h2>
+
+                    <p>
+                        This prototype alert is not a medical diagnosis,
+                        laboratory result or government-issued warning.
+                    </p>
+                </article>
+            </aside>
+        </section>
+
+        <!-- Select another alert -->
+        <section class="alert-navigation-section">
+            <div>
+                <p class="eyebrow">ALERT DIRECTORY</p>
+
+                <h2>Review another monitoring alert</h2>
+            </div>
+
+            <div class="alert-page-selector">
+                <label for="alertPageSelector">
+                    Select another alert
+                </label>
+
+                <select id="alertPageSelector">
+                    <option value="">
+                        Choose an alert
+                    </option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Prototype notice -->
+        <section class="prototype-notice-section">
+            <div class="prototype-notice">
+                <span class="notice-icon">i</span>
+
+                <div>
+                    <h2>Prototype demonstration alert</h2>
+
+                    <p>
+                        The alert information, location, scores and
+                        recommended actions displayed here are created for
+                        academic demonstration and must not be treated as
+                        official public-health information.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence for safer water and
+                    healthier communities across Northeast India.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Platform</h3>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Smart health intelligence for safer communities.
+            </p>
+
+            <p>Prototype project · English interface</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="alert-details.js?v=1"></script>
+</body>
+</html>

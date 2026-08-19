@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Detailed environmental and waterborne disease risk intelligence for Northeast India."
+    >
+
+    <title>State Risk Details | AquaSentinel AI</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="AquaSentinel home"
+            >
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html" class="active">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="state-details-page">
+        <!-- Breadcrumb -->
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <a href="risk-map.html">Risk Map</a>
+            <span>›</span>
+            <strong id="breadcrumbState">State Details</strong>
+        </nav>
+
+        <!-- State hero -->
+        <section class="state-details-hero">
+            <div class="state-hero-content">
+                <a href="risk-map.html" class="back-to-map-link">
+                    <span>←</span>
+                    Back to Risk Map
+                </a>
+
+                <p class="eyebrow">REGIONAL RISK PROFILE</p>
+
+                <h1 id="statePageName">Loading state...</h1>
+
+                <p id="statePageIntroduction">
+                    Preparing regional environmental and
+                    health-surveillance information.
+                </p>
+
+                <div class="state-hero-meta">
+                    <span>
+                        Capital
+                        <strong id="stateCapital">—</strong>
+                    </span>
+
+                    <span>
+                        Region
+                        <strong>Northeast India</strong>
+                    </span>
+
+                    <span>
+                        Data type
+                        <strong>Prototype</strong>
+                    </span>
+                </div>
+
+                <div class="state-hero-actions">
+                    <a href="ai-lab.html" class="primary-button">
+                        Analyse with AquaAI
+                    </a>
+
+                    <a href="report.html" class="secondary-button">
+                        Report a Concern
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main score -->
+            <div class="state-score-card">
+                <div class="state-score-card-heading">
+                    <div>
+                        <span>Current prototype status</span>
+                        <h2>Combined Risk Index</h2>
+                    </div>
+
+                    <span
+                        class="state-risk-badge"
+                        id="statePageRiskBadge"
+                    >
+                        Loading
+                    </span>
+                </div>
+
+                <div class="large-risk-score-wrapper">
+                    <div
+                        class="large-risk-score"
+                        id="statePageScore"
+                    >
+                        --
+                    </div>
+
+                    <div>
+                        <span>Risk score out of 100</span>
+
+                        <strong id="stateScoreMessage">
+                            Preparing risk interpretation
+                        </strong>
+                    </div>
+                </div>
+
+                <div class="state-score-progress">
+                    <div class="score-progress-labels">
+                        <span>Low</span>
+                        <span>Moderate</span>
+                        <span>High</span>
+                        <span>Critical</span>
+                    </div>
+
+                    <div class="score-progress-track">
+                        <span id="overallRiskProgress"></span>
+                    </div>
+                </div>
+
+                <div class="state-update-information">
+                    <span class="status-dot"></span>
+
+                    <p>
+                        Prototype profile updated
+                        <strong id="stateLastUpdated">
+                            Loading...
+                        </strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary metrics -->
+        <section class="state-metric-section">
+            <article class="state-metric-card metric-environment">
+                <div class="metric-icon">B1</div>
+
+                <div class="metric-card-content">
+                    <span>Environmental risk</span>
+
+                    <strong id="stateEnvironmentScore">
+                        --%
+                    </strong>
+
+                    <small>
+                        Water and environmental indicators
+                    </small>
+                </div>
+            </article>
+
+            <article class="state-metric-card metric-health">
+                <div class="metric-icon">B2</div>
+
+                <div class="metric-card-content">
+                    <span>Health surveillance</span>
+
+                    <strong id="stateHealthScore">
+                        --%
+                    </strong>
+
+                    <small id="stateHealthSignal">
+                        Preparing signal
+                    </small>
+                </div>
+            </article>
+
+            <article class="state-metric-card metric-disease">
+                <div class="metric-icon">+</div>
+
+                <div class="metric-card-content">
+                    <span>Primary concern</span>
+
+                    <strong id="statePrimaryDisease">
+                        Loading...
+                    </strong>
+
+                    <small>Prototype disease signal</small>
+                </div>
+            </article>
+
+            <article class="state-metric-card metric-trend">
+                <div class="metric-icon">↗</div>
+
+                <div class="metric-card-content">
+                    <span>Current trend</span>
+
+                    <strong id="stateRiskTrend">
+                        Loading...
+                    </strong>
+
+                    <small>Recent prototype pattern</small>
+                </div>
+            </article>
+        </section>
+
+        <!-- Detailed analysis -->
+        <section class="state-analysis-layout">
+            <div class="state-analysis-main">
+                <!-- Signal breakdown -->
+                <article class="analysis-panel indicator-analysis-panel">
+                    <div class="analysis-panel-heading">
+                        <div>
+                            <p class="eyebrow">SIGNAL BREAKDOWN</p>
+
+                            <h2>
+                                Environmental and health indicators
+                            </h2>
+                        </div>
+
+                        <span class="prototype-label">
+                            PROTOTYPE
+                        </span>
+                    </div>
+
+                    <div class="detailed-progress-group">
+                        <div class="detailed-progress-heading">
+                            <div>
+                                <strong>
+                                    B1 Environmental contribution
+                                </strong>
+
+                                <span>
+                                    Water quality, weather and sanitation
+                                </span>
+                            </div>
+
+                            <strong id="environmentDetailPercentage">
+                                --%
+                            </strong>
+                        </div>
+
+                        <div class="detailed-progress-track">
+                            <span id="environmentDetailBar"></span>
+                        </div>
+                    </div>
+
+                    <div class="detailed-progress-group">
+                        <div class="detailed-progress-heading">
+                            <div>
+                                <strong>
+                                    B2 Health contribution
+                                </strong>
+
+                                <span>
+                                    Symptoms and community surveillance
+                                </span>
+                            </div>
+
+                            <strong id="healthDetailPercentage">
+                                --%
+                            </strong>
+                        </div>
+
+                        <div
+                            class="detailed-progress-track health-detail-track"
+                        >
+                            <span id="healthDetailBar"></span>
+                        </div>
+                    </div>
+
+                    <div class="indicator-detail-grid">
+                        <article>
+                            <span>Water-quality pressure</span>
+                            <strong id="waterPressure">
+                                Calculating
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Community health signal</span>
+                            <strong id="communitySignal">
+                                Calculating
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Monitoring priority</span>
+                            <strong id="monitoringPriority">
+                                Calculating
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Review status</span>
+                            <strong>Prototype review</strong>
+                        </article>
+                    </div>
+                </article>
+
+                <!-- AI explanation -->
+                <article class="analysis-panel ai-explanation-panel">
+                    <div class="ai-explanation-heading">
+                        <span class="ai-explanation-icon">AI</span>
+
+                        <div>
+                            <p class="eyebrow">AQUAAI INSIGHT</p>
+
+                            <h2>
+                                Explainable risk interpretation
+                            </h2>
+                        </div>
+                    </div>
+
+                    <p
+                        class="ai-explanation-text"
+                        id="stateFullExplanation"
+                    >
+                        AquaAI is preparing an explanation for the
+                        selected state.
+                    </p>
+
+                    <div class="ai-factor-grid">
+                        <article>
+                            <span>Environmental influence</span>
+
+                            <strong id="environmentInfluence">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Health influence</span>
+
+                            <strong id="healthInfluence">
+                                Loading
+                            </strong>
+                        </article>
+
+                        <article>
+                            <span>Overall confidence</span>
+
+                            <strong>
+                                Demonstration only
+                            </strong>
+                        </article>
+                    </div>
+
+                    <a href="ai-lab.html" class="primary-button">
+                        Open Full AquaAI Lab
+                    </a>
+                </article>
+            </div>
+
+            <!-- Recommendations -->
+            <aside class="state-action-sidebar">
+                <article
+                    class="action-sidebar-card priority-action-card"
+                >
+                    <span class="sidebar-card-label">
+                        RECOMMENDED ACTION
+                    </span>
+
+                    <h2>Monitoring recommendation</h2>
+
+                    <p id="stateRecommendedAction">
+                        Preparing a recommended monitoring action.
+                    </p>
+
+                    <a href="report.html" class="secondary-button">
+                        Submit Community Report
+                    </a>
+                </article>
+
+                <article class="action-sidebar-card prevention-card">
+                    <span class="sidebar-card-label">
+                        COMMUNITY GUIDANCE
+                    </span>
+
+                    <h2>Essential precautions</h2>
+
+                    <ul>
+                        <li>
+                            Use safe or properly treated drinking water.
+                        </li>
+
+                        <li>
+                            Maintain handwashing and food hygiene.
+                        </li>
+
+                        <li>
+                            Report unusual illness patterns promptly.
+                        </li>
+
+                        <li>
+                            Follow verified local health guidance.
+                        </li>
+                    </ul>
+
+                    <a href="awareness.html">
+                        View prevention guidance →
+                    </a>
+                </article>
+
+                <article class="action-sidebar-card emergency-card">
+                    <span class="sidebar-card-label">
+                        IMPORTANT NOTICE
+                    </span>
+
+                    <h2>Not a medical diagnosis</h2>
+
+                    <p>
+                        This academic prototype does not replace
+                        medical advice, laboratory testing or official
+                        public-health warnings.
+                    </p>
+                </article>
+            </aside>
+        </section>
+
+        <!-- Select another state -->
+        <section class="state-navigation-section">
+            <div>
+                <p class="eyebrow">EXPLORE ANOTHER REGION</p>
+
+                <h2>View a different Northeast state</h2>
+            </div>
+
+            <div class="state-page-selector">
+                <label for="statePageSelector">
+                    Select another state
+                </label>
+
+                <select id="statePageSelector">
+                    <option value="Arunachal Pradesh">
+                        Arunachal Pradesh
+                    </option>
+
+                    <option value="Assam">Assam</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tripura">Tripura</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Prototype notice -->
+        <section class="prototype-notice-section">
+            <div class="prototype-notice">
+                <span class="notice-icon">i</span>
+
+                <div>
+                    <h2>Prototype demonstration data</h2>
+
+                    <p>
+                        Risk scores, indicators and recommendations
+                        displayed here are created for academic
+                        demonstration. They must not be treated as
+                        official public-health information.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence for safer water and
+                    healthier communities across Northeast India.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Platform</h3>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Smart health intelligence for safer communities.
+            </p>
+
+            <p>Prototype project · English interface</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="state-details.js"></script>
+</body>
+</html>

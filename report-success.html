@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="View the confirmation and prototype tracking details for an AquaSentinel AI community report."
+    >
+
+    <title>Report Confirmation | AquaSentinel AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="report-success-page">
+
+    <!-- Header -->
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="brand">
+                <span class="brand-icon">A</span>
+
+                <span class="brand-copy">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+
+                <a
+                    href="report.html"
+                    class="active"
+                >
+                    Report Concern
+                </a>
+
+                <a href="awareness.html">
+                    Awareness
+                </a>
+
+                <a
+                    href="login.html"
+                    class="login-button"
+                >
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Loading state -->
+
+        <section
+            class="report-success-loading"
+            id="reportSuccessLoading"
+        >
+            <div class="report-loading-animation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <h1>Loading report confirmation...</h1>
+
+            <p>
+                AquaSentinel is retrieving the prototype report stored
+                in this browser.
+            </p>
+        </section>
+
+        <!-- Missing report state -->
+
+        <section
+            class="report-not-found"
+            id="reportNotFound"
+            hidden
+        >
+            <div class="report-not-found-icon">?</div>
+
+            <p class="eyebrow">REPORT NOT FOUND</p>
+
+            <h1>
+                We could not locate this
+                prototype report.
+            </h1>
+
+            <p>
+                The report may have been created in another browser,
+                removed from browser storage or opened using an
+                incorrect report link.
+            </p>
+
+            <div class="report-not-found-actions">
+                <a
+                    href="report.html"
+                    class="primary-button"
+                >
+                    Create a New Report
+                </a>
+
+                <a
+                    href="index.html"
+                    class="secondary-button"
+                >
+                    Return Home
+                </a>
+            </div>
+        </section>
+
+        <!-- Main confirmation content -->
+
+        <div
+            class="report-success-content"
+            id="reportSuccessContent"
+            hidden
+        >
+
+            <!-- Success hero -->
+
+            <section class="report-success-hero">
+
+                <div class="report-success-hero-content">
+
+                    <div class="report-success-icon">
+                        <span>✓</span>
+                    </div>
+
+                    <p class="eyebrow">
+                        REPORT SUCCESSFULLY CREATED
+                    </p>
+
+                    <h1>
+                        Thank you for supporting
+                        <span>community health monitoring.</span>
+                    </h1>
+
+                    <p>
+                        Your observation has been recorded inside this
+                        browser prototype. Keep the reference ID below
+                        if you need to reopen the report.
+                    </p>
+
+                    <div class="report-reference-card">
+                        <div>
+                            <small>Prototype report ID</small>
+
+                            <strong id="successReportId">
+                                Loading...
+                            </strong>
+                        </div>
+
+                        <button
+                            type="button"
+                            id="copyReportIdButton"
+                        >
+                            Copy ID
+                        </button>
+                    </div>
+
+                    <div class="report-success-actions">
+                        <a
+                            href="report.html"
+                            class="primary-button"
+                        >
+                            Submit Another Report
+                        </a>
+
+                        <a
+                            href="alerts.html"
+                            class="secondary-button"
+                        >
+                            View Current Alerts
+                        </a>
+                    </div>
+                </div>
+
+                <div class="report-success-visual">
+
+                    <div class="report-success-orbit orbit-one"></div>
+                    <div class="report-success-orbit orbit-two"></div>
+
+                    <div class="report-success-visual-core">
+                        <span>✓</span>
+                        <strong>Report Recorded</strong>
+                        <small>Prototype confirmation</small>
+                    </div>
+
+                    <div class="success-floating-card success-card-one">
+                        <span>01</span>
+
+                        <div>
+                            <small>Community signal</small>
+                            <strong>Captured</strong>
+                        </div>
+                    </div>
+
+                    <div class="success-floating-card success-card-two">
+                        <span>02</span>
+
+                        <div>
+                            <small>Information</small>
+                            <strong>Structured</strong>
+                        </div>
+                    </div>
+
+                    <div class="success-floating-card success-card-three">
+                        <span>03</span>
+
+                        <div>
+                            <small>Current status</small>
+                            <strong>Awaiting verification</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Status workflow -->
+
+            <section class="report-status-section">
+
+                <div class="report-success-heading">
+                    <div>
+                        <p class="eyebrow">
+                            PROTOTYPE STATUS
+                        </p>
+
+                        <h2>Report processing workflow</h2>
+
+                        <p>
+                            This workflow demonstrates how a future
+                            verified reporting platform could process
+                            community observations.
+                        </p>
+                    </div>
+
+                    <span
+                        class="report-current-status"
+                        id="successReportStatus"
+                    >
+                        Submitted for prototype review
+                    </span>
+                </div>
+
+                <div class="report-status-timeline">
+
+                    <article class="report-status-item completed">
+                        <span class="report-status-number">1</span>
+
+                        <div>
+                            <small>Completed</small>
+                            <h3>Report submitted</h3>
+                            <p>
+                                The structured observation has been
+                                recorded in this browser.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="report-status-item active">
+                        <span class="report-status-number">2</span>
+
+                        <div>
+                            <small>Current stage</small>
+                            <h3>Awaiting verification</h3>
+                            <p>
+                                A real deployment would verify location,
+                                environmental evidence and health signals.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="report-status-item">
+                        <span class="report-status-number">3</span>
+
+                        <div>
+                            <small>Future workflow</small>
+                            <h3>Risk assessment</h3>
+                            <p>
+                                Verified information could be combined
+                                with water-quality and surveillance data.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="report-status-item">
+                        <span class="report-status-number">4</span>
+
+                        <div>
+                            <small>Future workflow</small>
+                            <h3>Response coordination</h3>
+                            <p>
+                                Responsible authorities could coordinate
+                                field action when evidence supports it.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Report summary -->
+
+            <section class="report-confirmation-layout">
+
+                <div class="report-confirmation-main">
+
+                    <div class="report-success-heading">
+                        <div>
+                            <p class="eyebrow">
+                                SUBMISSION SUMMARY
+                            </p>
+
+                            <h2>Your recorded observation</h2>
+
+                            <p>
+                                Review the information currently stored
+                                for this report.
+                            </p>
+                        </div>
+                    </div>
+
+                    <article class="confirmation-summary-card">
+
+                        <div class="confirmation-summary-header">
+                            <div>
+                                <span id="confirmationConcernType">
+                                    Community concern
+                                </span>
+
+                                <h3 id="confirmationSummary">
+                                    Loading report...
+                                </h3>
+
+                                <p id="confirmationLocation">
+                                    Loading location...
+                                </p>
+                            </div>
+
+                            <span
+                                class="confirmation-urgency"
+                                id="confirmationUrgency"
+                            >
+                                Loading...
+                            </span>
+                        </div>
+
+                        <div class="confirmation-metric-grid">
+
+                            <div class="confirmation-metric">
+                                <span>Submitted</span>
+
+                                <strong id="confirmationSubmittedAt">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div class="confirmation-metric">
+                                <span>Observation date</span>
+
+                                <strong id="confirmationObservationDate">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div class="confirmation-metric">
+                                <span>Priority score</span>
+
+                                <strong id="confirmationPriorityScore">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div class="confirmation-metric">
+                                <span>Estimated people affected</span>
+
+                                <strong id="confirmationPeopleAffected">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div class="confirmation-metric">
+                                <span>Water source</span>
+
+                                <strong id="confirmationWaterSource">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div class="confirmation-metric">
+                                <span>Reporter</span>
+
+                                <strong id="confirmationReporter">
+                                    Loading...
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="confirmation-description">
+                            <span>Detailed observation</span>
+
+                            <p id="confirmationDescription">
+                                Loading report description...
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Signal interpretation -->
+
+                    <article class="confirmation-analysis-card">
+
+                        <div class="confirmation-analysis-heading">
+                            <span class="confirmation-ai-icon">AI</span>
+
+                            <div>
+                                <small>
+                                    PROTOTYPE SIGNAL INTERPRETATION
+                                </small>
+
+                                <h3>
+                                    Initial reporting context
+                                </h3>
+                            </div>
+                        </div>
+
+                        <p id="confirmationInterpretation">
+                            Loading interpretation...
+                        </p>
+
+                        <div class="confirmation-signal-grid">
+
+                            <div>
+                                <span>Concern category</span>
+                                <strong id="signalConcernType">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Symptoms</span>
+                                <strong id="signalSymptoms">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Water appearance</span>
+                                <strong id="signalWaterAppearance">
+                                    Loading...
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Water smell</span>
+                                <strong id="signalWaterOdour">
+                                    Loading...
+                                </strong>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+
+                <aside class="report-confirmation-sidebar">
+
+                    <article class="confirmation-next-card">
+                        <span class="confirmation-card-label">
+                            Recommended next steps
+                        </span>
+
+                        <h3 id="confirmationNextStepTitle">
+                            Continue monitoring
+                        </h3>
+
+                        <p id="confirmationNextStepText">
+                            Loading recommendations...
+                        </p>
+
+                        <ul id="confirmationRecommendations">
+                            <li>Loading guidance...</li>
+                        </ul>
+                    </article>
+
+                    <article class="confirmation-info-card">
+                        <span class="confirmation-info-icon">i</span>
+
+                        <div>
+                            <h3>Keep your report ID</h3>
+
+                            <p>
+                                The reference ID identifies this report
+                                inside the current browser prototype.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="confirmation-info-card">
+                        <span class="confirmation-info-icon">P</span>
+
+                        <div>
+                            <h3>Privacy reminder</h3>
+
+                            <p>
+                                This page does not display uploaded image
+                                contents or unnecessary personal details.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="confirmation-info-card">
+                        <span class="confirmation-info-icon">!</span>
+
+                        <div>
+                            <h3>Emergency assistance</h3>
+
+                            <p>
+                                For urgent medical danger, contact your
+                                nearest hospital or local emergency service.
+                            </p>
+                        </div>
+                    </article>
+
+                    <button
+                        type="button"
+                        class="delete-prototype-report"
+                        id="deletePrototypeReport"
+                    >
+                        Delete This Prototype Report
+                    </button>
+                </aside>
+            </section>
+
+            <!-- Important notice -->
+
+            <section class="confirmation-prototype-notice">
+                <span>Prototype notice</span>
+
+                <p>
+                    This confirmation page demonstrates a reporting and
+                    tracking experience. The report is stored only in this
+                    browser and has not been sent to health authorities,
+                    laboratories or emergency services.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-copy">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Community-centred intelligence for safer water
+                    and healthier communities.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <strong>Platform</strong>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+            </div>
+
+            <div class="footer-links">
+                <strong>Community</strong>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Prototype health-intelligence platform.
+            </p>
+
+            <p>
+                Interface updated:
+                <span id="pageUpdatedTime">Loading...</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="report-success.js?v=1"></script>
+</body>
+</html>

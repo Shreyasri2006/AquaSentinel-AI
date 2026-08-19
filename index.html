@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AquaSentinel AI is an early-warning and community health intelligence platform for monitoring waterborne disease risks across Northeast India."
+    >
+
+    <title>AquaSentinel AI | Community Health Intelligence</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="index.html" class="brand" aria-label="AquaSentinel home">
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero home-hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Community health early-warning platform
+                </div>
+
+                <p class="eyebrow">
+                    SMART WATER AND HEALTH MONITORING
+                </p>
+
+                <h1>
+                    Detect waterborne disease risks
+                    <span>before they become outbreaks.</span>
+                </h1>
+
+                <p class="hero-description">
+                    AquaSentinel AI combines water-quality indicators,
+                    environmental conditions and community health signals to
+                    support faster, safer and better-informed action across
+                    Northeast India.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="risk-map.html" class="primary-button">
+                        Explore Risk Map
+                    </a>
+
+                    <a href="ai-lab.html" class="secondary-button">
+                        Try AquaAI
+                    </a>
+                </div>
+
+                <div class="hero-trust-row">
+                    <span>✓ Eight Northeast states</span>
+                    <span>✓ Community reporting</span>
+                    <span>✓ Explainable risk insights</span>
+                </div>
+            </div>
+
+            <div class="hero-panel home-hero-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p>Regional intelligence</p>
+                        <h2>Health Risk Overview</h2>
+                    </div>
+
+                    <span class="live-badge">PROTOTYPE</span>
+                </div>
+
+                <div class="risk-status">
+                    <span class="risk-indicator"></span>
+
+                    <div>
+                        <small>Combined regional status</small>
+                        <strong>Moderate Risk</strong>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <article>
+                        <span>08</span>
+                        <p>States monitored</p>
+                    </article>
+
+                    <article>
+                        <span>12</span>
+                        <p>Risk signals</p>
+                    </article>
+
+                    <article>
+                        <span>04</span>
+                        <p>Priority districts</p>
+                    </article>
+
+                    <article>
+                        <span>24/7</span>
+                        <p>Monitoring vision</p>
+                    </article>
+                </div>
+
+                <div class="mini-signal-list">
+                    <div>
+                        <span class="signal-icon signal-water">W</span>
+
+                        <p>
+                            <strong>Water indicators</strong>
+                            <small>
+                                Turbidity, rainfall and contamination signals
+                            </small>
+                        </p>
+
+                        <span class="signal-state">Tracked</span>
+                    </div>
+
+                    <div>
+                        <span class="signal-icon signal-health">H</span>
+
+                        <p>
+                            <strong>Health surveillance</strong>
+                            <small>
+                                Community symptoms and disease trends
+                            </small>
+                        </p>
+
+                        <span class="signal-state">Analysed</span>
+                    </div>
+
+                    <div>
+                        <span class="signal-icon signal-ai">AI</span>
+
+                        <p>
+                            <strong>AquaAI fusion</strong>
+                            <small>
+                                Environmental and health risk explanation
+                            </small>
+                        </p>
+
+                        <span class="signal-state">Ready</span>
+                    </div>
+                </div>
+
+                <p class="update-time">
+                    Interface updated:
+                    <span id="lastUpdated">Loading...</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Platform Introduction -->
+        <section class="home-introduction-section">
+            <div class="section-heading centered-heading">
+                <p class="eyebrow">ONE CONNECTED PLATFORM</p>
+
+                <h2>
+                    From community observations to actionable intelligence
+                </h2>
+
+                <p>
+                    AquaSentinel brings monitoring, prediction, reporting and
+                    public awareness into one accessible digital platform.
+                </p>
+            </div>
+
+            <div class="home-feature-grid">
+                <article class="home-feature-card feature-map">
+                    <div class="feature-icon">01</div>
+
+                    <p class="feature-label">REGIONAL MONITORING</p>
+
+                    <h3>Professional Risk Map</h3>
+
+                    <p>
+                        Explore state and district-level prototype risk signals
+                        through a focused map designed specifically for
+                        Northeast India.
+                    </p>
+
+                    <a href="risk-map.html">
+                        Open Risk Map <span>→</span>
+                    </a>
+                </article>
+
+                <article class="home-feature-card feature-ai">
+                    <div class="feature-icon">02</div>
+
+                    <p class="feature-label">AI-ASSISTED ANALYSIS</p>
+
+                    <h3>AquaAI Risk Lab</h3>
+
+                    <p>
+                        Enter environmental and health indicators to receive a
+                        prototype risk classification with a clear explanation.
+                    </p>
+
+                    <a href="ai-lab.html">
+                        Open AI Lab <span>→</span>
+                    </a>
+                </article>
+
+                <article class="home-feature-card feature-report">
+                    <div class="feature-icon">03</div>
+
+                    <p class="feature-label">COMMUNITY PARTICIPATION</p>
+
+                    <h3>Report a Concern</h3>
+
+                    <p>
+                        Help identify possible water contamination, sanitation
+                        issues and unusual illness patterns in the community.
+                    </p>
+
+                    <a href="report.html">
+                        Submit Report <span>→</span>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Workflow -->
+        <section class="home-workflow-section">
+            <div class="section-heading">
+                <p class="eyebrow">HOW AQUASENTINEL WORKS</p>
+
+                <h2>A clear path from signal to response</h2>
+
+                <p>
+                    The platform is structured around four connected stages
+                    that help turn scattered observations into understandable
+                    health-risk information.
+                </p>
+            </div>
+
+            <div class="workflow-grid">
+                <article class="workflow-card">
+                    <span class="workflow-number">01</span>
+                    <h3>Collect</h3>
+
+                    <p>
+                        Gather water-quality, environmental and community
+                        health indicators.
+                    </p>
+                </article>
+
+                <article class="workflow-card">
+                    <span class="workflow-number">02</span>
+                    <h3>Analyse</h3>
+
+                    <p>
+                        Examine B1 environmental risk and B2 health
+                        surveillance signals.
+                    </p>
+                </article>
+
+                <article class="workflow-card">
+                    <span class="workflow-number">03</span>
+                    <h3>Predict</h3>
+
+                    <p>
+                        Combine available indicators to estimate an overall
+                        disease-risk level.
+                    </p>
+                </article>
+
+                <article class="workflow-card">
+                    <span class="workflow-number">04</span>
+                    <h3>Respond</h3>
+
+                    <p>
+                        Present warnings, recommended actions and awareness
+                        guidance.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Regional Coverage -->
+        <section class="home-coverage-section">
+            <div class="coverage-content">
+                <p class="eyebrow">REGIONAL COVERAGE</p>
+
+                <h2>Designed for Northeast India</h2>
+
+                <p>
+                    The prototype covers all eight Northeast states and is
+                    designed to support rural communities, health officials
+                    and local response teams.
+                </p>
+
+                <div class="state-list" aria-label="Northeast states">
+                    <span>Arunachal Pradesh</span>
+                    <span>Assam</span>
+                    <span>Manipur</span>
+                    <span>Meghalaya</span>
+                    <span>Mizoram</span>
+                    <span>Nagaland</span>
+                    <span>Sikkim</span>
+                    <span>Tripura</span>
+                </div>
+
+                <a href="risk-map.html" class="primary-button">
+                    View Regional Intelligence
+                </a>
+            </div>
+
+            <div class="coverage-visual" aria-label="AquaSentinel monitoring illustration">
+                <div class="coverage-orbit orbit-one"></div>
+                <div class="coverage-orbit orbit-two"></div>
+
+                <div class="coverage-center">
+                    <span>AI</span>
+                    <strong>AquaSentinel</strong>
+                    <small>Risk Intelligence</small>
+                </div>
+
+                <div class="coverage-point point-one">
+                    <strong>B1</strong>
+                    <small>Environment</small>
+                </div>
+
+                <div class="coverage-point point-two">
+                    <strong>B2</strong>
+                    <small>Health Data</small>
+                </div>
+
+                <div class="coverage-point point-three">
+                    <strong>8</strong>
+                    <small>States</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Cards -->
+        <section class="home-action-section">
+            <div class="section-heading centered-heading">
+                <p class="eyebrow">EXPLORE THE PLATFORM</p>
+                <h2>Choose what you want to do</h2>
+            </div>
+
+            <div class="action-card-grid">
+                <a href="alerts.html" class="action-card">
+                    <span class="action-card-icon">!</span>
+
+                    <div>
+                        <h3>Review Alerts</h3>
+                        <p>View active prototype warnings and priorities.</p>
+                    </div>
+
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="awareness.html" class="action-card">
+                    <span class="action-card-icon">+</span>
+
+                    <div>
+                        <h3>Learn Prevention</h3>
+                        <p>Access safe-water and disease-prevention guidance.</p>
+                    </div>
+
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="login.html" class="action-card">
+                    <span class="action-card-icon">O</span>
+
+                    <div>
+                        <h3>Official Access</h3>
+                        <p>Open the authorised health-official login.</p>
+                    </div>
+
+                    <span class="action-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Important Prototype Notice -->
+        <section class="prototype-notice-section">
+            <div class="prototype-notice">
+                <span class="notice-icon">i</span>
+
+                <div>
+                    <h2>Prototype demonstration</h2>
+
+                    <p>
+                        Current risk values, alerts and predictions are
+                        demonstration data for project development. They are
+                        not official medical diagnoses or government-issued
+                        public-health warnings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="home-cta-section">
+            <div>
+                <p class="eyebrow">COMMUNITY-DRIVEN PREVENTION</p>
+
+                <h2>Early awareness can protect entire communities.</h2>
+
+                <p>
+                    Explore regional risk intelligence or submit a community
+                    water and health concern.
+                </p>
+            </div>
+
+            <div class="cta-actions">
+                <a href="risk-map.html" class="primary-button">
+                    Explore Risk Map
+                </a>
+
+                <a href="report.html" class="secondary-button">
+                    Report a Concern
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence for safer water and healthier
+                    communities across Northeast India.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Platform</h3>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Smart health intelligence for safer communities.
+            </p>
+
+            <p>Prototype project · English interface</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

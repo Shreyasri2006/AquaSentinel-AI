@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Report community water-quality and health concerns through the AquaSentinel AI prototype reporting platform."
+    >
+
+    <title>Report a Concern | AquaSentinel AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="report-page">
+
+    <!-- ===================================================
+         HEADER
+         =================================================== -->
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="brand">
+                <span class="brand-icon">A</span>
+
+                <span class="brand-copy">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html" class="active">
+                    Report Concern
+                </a>
+                <a href="awareness.html">Awareness</a>
+
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="report-hero">
+
+            <div class="report-hero-content">
+
+                <div class="report-trust-badge">
+                    <span class="report-live-dot"></span>
+                    Secure community reporting prototype
+                </div>
+
+                <p class="eyebrow">
+                    COMMUNITY EARLY-WARNING NETWORK
+                </p>
+
+                <h1>
+                    Report a water or
+                    <span>health concern.</span>
+                </h1>
+
+                <p>
+                    Share local water-quality problems, unusual illness
+                    patterns or environmental changes. Community observations
+                    can help health teams identify potential risks earlier.
+                </p>
+
+                <div class="report-hero-actions">
+                    <a
+                        class="primary-button"
+                        href="#communityReportForm"
+                    >
+                        Start a Report
+                    </a>
+
+                    <a
+                        class="secondary-button"
+                        href="alerts.html"
+                    >
+                        View Current Alerts
+                    </a>
+                </div>
+
+                <div class="report-hero-notes">
+                    <span>English reporting interface</span>
+                    <span>Optional anonymous submission</span>
+                    <span>Prototype data storage</span>
+                </div>
+            </div>
+
+            <div class="report-hero-visual">
+
+                <img
+                    src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1200&q=85"
+                    alt="Community members accessing clean water"
+                >
+
+                <div class="report-visual-overlay"></div>
+
+                <div class="report-visual-card report-visual-card-top">
+                    <span class="report-visual-icon">01</span>
+
+                    <div>
+                        <small>Community signal</small>
+                        <strong>Observation recorded</strong>
+                    </div>
+                </div>
+
+                <div class="report-visual-card report-visual-card-bottom">
+                    <span class="report-visual-icon">AI</span>
+
+                    <div>
+                        <small>AquaSentinel workflow</small>
+                        <strong>Ready for verification</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             REPORTING WORKFLOW
+             ================================================= -->
+
+        <section class="report-process-section">
+
+            <div class="report-section-heading">
+                <p class="eyebrow">HOW REPORTING WORKS</p>
+
+                <h2>
+                    A simple and guided reporting process
+                </h2>
+
+                <p>
+                    Complete the four short stages. Review the information
+                    before submitting the prototype report.
+                </p>
+            </div>
+
+            <div class="report-process-grid">
+
+                <article class="report-process-card">
+                    <span>01</span>
+                    <h3>Choose the concern</h3>
+                    <p>
+                        Tell us whether the observation relates to water,
+                        illness, sanitation, flooding or contamination.
+                    </p>
+                </article>
+
+                <article class="report-process-card">
+                    <span>02</span>
+                    <h3>Add the location</h3>
+                    <p>
+                        Provide the state, district and the most useful
+                        local landmark or address.
+                    </p>
+                </article>
+
+                <article class="report-process-card">
+                    <span>03</span>
+                    <h3>Describe the observation</h3>
+                    <p>
+                        Add symptoms, water changes, urgency and an optional
+                        supporting photograph.
+                    </p>
+                </article>
+
+                <article class="report-process-card">
+                    <span>04</span>
+                    <h3>Receive a report ID</h3>
+                    <p>
+                        After submission, the prototype generates a unique
+                        reference number for the report.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- =================================================
+             EMERGENCY NOTICE
+             ================================================= -->
+
+        <section class="report-emergency-notice">
+            <div class="report-emergency-icon">!</div>
+
+            <div>
+                <strong>This form is not an emergency service.</strong>
+
+                <p>
+                    For a severe medical emergency, immediately contact your
+                    nearest hospital, local health authority or emergency
+                    service. Do not wait for a response through this prototype.
+                </p>
+            </div>
+        </section>
+
+        <!-- =================================================
+             REPORTING APPLICATION
+             ================================================= -->
+
+        <section class="report-application-section">
+
+            <div class="report-application-heading">
+                <div>
+                    <p class="eyebrow">
+                        COMMUNITY CONCERN FORM
+                    </p>
+
+                    <h2>Submit a new observation</h2>
+
+                    <p>
+                        Fields marked with an asterisk (*) are required.
+                    </p>
+                </div>
+
+                <div class="report-security-label">
+                    <span>✓</span>
+                    Prototype privacy controls enabled
+                </div>
+            </div>
+
+            <!-- Progress indicator -->
+
+            <div
+                class="report-progress"
+                aria-label="Report completion progress"
+            >
+                <div class="report-progress-track">
+                    <div
+                        class="report-progress-bar"
+                        id="reportProgressBar"
+                    ></div>
+                </div>
+
+                <div class="report-progress-steps">
+
+                    <button
+                        type="button"
+                        class="report-progress-step active"
+                        data-step-target="1"
+                    >
+                        <span>1</span>
+                        Concern
+                    </button>
+
+                    <button
+                        type="button"
+                        class="report-progress-step"
+                        data-step-target="2"
+                    >
+                        <span>2</span>
+                        Location
+                    </button>
+
+                    <button
+                        type="button"
+                        class="report-progress-step"
+                        data-step-target="3"
+                    >
+                        <span>3</span>
+                        Evidence
+                    </button>
+
+                    <button
+                        type="button"
+                        class="report-progress-step"
+                        data-step-target="4"
+                    >
+                        <span>4</span>
+                        Review
+                    </button>
+                </div>
+            </div>
+
+            <div class="report-form-layout">
+
+                <!-- Main form -->
+
+                <form
+                    id="communityReportForm"
+                    class="community-report-form"
+                    novalidate
+                >
+
+                    <!-- =====================================
+                         STEP 1
+                         ===================================== -->
+
+                    <section
+                        class="report-form-step active"
+                        data-report-step="1"
+                    >
+                        <div class="report-form-step-heading">
+                            <span>Step 01</span>
+
+                            <div>
+                                <h3>What did you observe?</h3>
+
+                                <p>
+                                    Select the category that best represents
+                                    the community concern.
+                                </p>
+                            </div>
+                        </div>
+
+                        <fieldset class="report-fieldset">
+                            <legend>
+                                Concern category *
+                            </legend>
+
+                            <div class="concern-category-grid">
+
+                                <label class="concern-category-card">
+                                    <input
+                                        type="radio"
+                                        name="concernType"
+                                        value="Water quality"
+                                        required
+                                    >
+
+                                    <span class="concern-card-icon">WQ</span>
+
+                                    <strong>Water quality</strong>
+
+                                    <small>
+                                        Colour, smell, taste, turbidity or
+                                        visible contamination
+                                    </small>
+                                </label>
+
+                                <label class="concern-category-card">
+                                    <input
+                                        type="radio"
+                                        name="concernType"
+                                        value="Illness symptoms"
+                                    >
+
+                                    <span class="concern-card-icon">HS</span>
+
+                                    <strong>Illness symptoms</strong>
+
+                                    <small>
+                                        Unusual diarrhoea, vomiting, fever
+                                        or jaundice
+                                    </small>
+                                </label>
+
+                                <label class="concern-category-card">
+                                    <input
+                                        type="radio"
+                                        name="concernType"
+                                        value="Flooding"
+                                    >
+
+                                    <span class="concern-card-icon">FL</span>
+
+                                    <strong>Flooding</strong>
+
+                                    <small>
+                                        Floodwater affecting drinking-water
+                                        sources
+                                    </small>
+                                </label>
+
+                                <label class="concern-category-card">
+                                    <input
+                                        type="radio"
+                                        name="concernType"
+                                        value="Sanitation"
+                                    >
+
+                                    <span class="concern-card-icon">SN</span>
+
+                                    <strong>Sanitation</strong>
+
+                                    <small>
+                                        Sewage leakage, unsafe waste disposal
+                                        or drainage issues
+                                    </small>
+                                </label>
+
+                                <label class="concern-category-card">
+                                    <input
+                                        type="radio"
+                                        name="concernType"
+                                        value="Water source damage"
+                                    >
+
+                                    <span class="concern-card-icon">WS</span>
+
+                                    <strong>Source damage</strong>
+
+                                    <small>
+                                        Damaged well, pipe, hand pump or
+                                        storage facility
+                                    </small>
+                                </label>
+
+                                <label class="concern-category-card">
+                                    <input
+                                        type="radio"
+                                        name="concernType"
+                                        value="Other concern"
+                                    >
+
+                                    <span class="concern-card-icon">+</span>
+
+                                    <strong>Other concern</strong>
+
+                                    <small>
+                                        Another environmental or community
+                                        health observation
+                                    </small>
+                                </label>
+                            </div>
+
+                            <p
+                                class="report-field-error"
+                                id="concernTypeError"
+                                role="alert"
+                            ></p>
+                        </fieldset>
+
+                        <div class="report-form-grid">
+
+                            <div class="report-field">
+                                <label for="observationDate">
+                                    Date observed *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="observationDate"
+                                    name="observationDate"
+                                    required
+                                >
+
+                                <small>
+                                    Choose the date the concern was first
+                                    noticed.
+                                </small>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="observationTime">
+                                    Approximate time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="observationTime"
+                                    name="observationTime"
+                                >
+
+                                <small>
+                                    An approximate time is acceptable.
+                                </small>
+                            </div>
+
+                            <div class="report-field full-width">
+                                <label for="concernSummary">
+                                    Short concern title *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="concernSummary"
+                                    name="concernSummary"
+                                    maxlength="100"
+                                    placeholder="Example: Unusual smell in community well"
+                                    required
+                                >
+
+                                <div class="report-field-meta">
+                                    <small>
+                                        Describe the concern in one sentence.
+                                    </small>
+
+                                    <small>
+                                        <span id="summaryCharacterCount">
+                                            0
+                                        </span>/100
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- =====================================
+                         STEP 2
+                         ===================================== -->
+
+                    <section
+                        class="report-form-step"
+                        data-report-step="2"
+                        hidden
+                    >
+                        <div class="report-form-step-heading">
+                            <span>Step 02</span>
+
+                            <div>
+                                <h3>Where did it happen?</h3>
+
+                                <p>
+                                    Give enough location information for
+                                    future field verification.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="report-form-grid">
+
+                            <div class="report-field">
+                                <label for="reportState">
+                                    State *
+                                </label>
+
+                                <select
+                                    id="reportState"
+                                    name="reportState"
+                                    required
+                                >
+                                    <option value="">
+                                        Select state
+                                    </option>
+
+                                    <option value="Arunachal Pradesh">
+                                        Arunachal Pradesh
+                                    </option>
+
+                                    <option value="Assam">
+                                        Assam
+                                    </option>
+
+                                    <option value="Manipur">
+                                        Manipur
+                                    </option>
+
+                                    <option value="Meghalaya">
+                                        Meghalaya
+                                    </option>
+
+                                    <option value="Mizoram">
+                                        Mizoram
+                                    </option>
+
+                                    <option value="Nagaland">
+                                        Nagaland
+                                    </option>
+
+                                    <option value="Sikkim">
+                                        Sikkim
+                                    </option>
+
+                                    <option value="Tripura">
+                                        Tripura
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="reportDistrict">
+                                    District *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="reportDistrict"
+                                    name="reportDistrict"
+                                    list="districtSuggestions"
+                                    placeholder="Enter district"
+                                    required
+                                >
+
+                                <datalist id="districtSuggestions"></datalist>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="reportLocality">
+                                    Village, town or locality *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="reportLocality"
+                                    name="reportLocality"
+                                    placeholder="Enter the locality"
+                                    required
+                                >
+                            </div>
+
+                            <div class="report-field">
+                                <label for="reportPostalCode">
+                                    Postal code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="reportPostalCode"
+                                    name="reportPostalCode"
+                                    inputmode="numeric"
+                                    maxlength="6"
+                                    pattern="[0-9]{6}"
+                                    placeholder="6-digit postal code"
+                                >
+                            </div>
+
+                            <div class="report-field full-width">
+                                <label for="reportLandmark">
+                                    Landmark or location description *
+                                </label>
+
+                                <textarea
+                                    id="reportLandmark"
+                                    name="reportLandmark"
+                                    rows="4"
+                                    maxlength="300"
+                                    placeholder="Example: Community well beside the primary school"
+                                    required
+                                ></textarea>
+
+                                <small>
+                                    Do not enter unnecessary private household
+                                    information.
+                                </small>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="waterSourceType">
+                                    Nearby water source
+                                </label>
+
+                                <select
+                                    id="waterSourceType"
+                                    name="waterSourceType"
+                                >
+                                    <option value="">
+                                        Select water source
+                                    </option>
+
+                                    <option value="Piped supply">
+                                        Piped supply
+                                    </option>
+
+                                    <option value="Tube well">
+                                        Tube well
+                                    </option>
+
+                                    <option value="Open well">
+                                        Open well
+                                    </option>
+
+                                    <option value="Spring">
+                                        Spring
+                                    </option>
+
+                                    <option value="River or stream">
+                                        River or stream
+                                    </option>
+
+                                    <option value="Pond">
+                                        Pond
+                                    </option>
+
+                                    <option value="Community storage tank">
+                                        Community storage tank
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="peopleAffected">
+                                    Estimated people affected
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="peopleAffected"
+                                    name="peopleAffected"
+                                    min="0"
+                                    max="1000000"
+                                    placeholder="Example: 25"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="location-permission-card">
+                            <div class="location-permission-icon">⌖</div>
+
+                            <div>
+                                <strong>
+                                    Add approximate device location
+                                </strong>
+
+                                <p>
+                                    Location access is optional. Coordinates
+                                    are stored only in this browser prototype.
+                                </p>
+
+                                <div class="location-permission-actions">
+                                    <button
+                                        type="button"
+                                        id="captureLocationButton"
+                                        class="report-outline-button"
+                                    >
+                                        Use My Location
+                                    </button>
+
+                                    <span id="locationStatus">
+                                        Location not added
+                                    </span>
+                                </div>
+
+                                <input
+                                    type="hidden"
+                                    id="reportLatitude"
+                                    name="reportLatitude"
+                                >
+
+                                <input
+                                    type="hidden"
+                                    id="reportLongitude"
+                                    name="reportLongitude"
+                                >
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- =====================================
+                         STEP 3
+                         ===================================== -->
+
+                    <section
+                        class="report-form-step"
+                        data-report-step="3"
+                        hidden
+                    >
+                        <div class="report-form-step-heading">
+                            <span>Step 03</span>
+
+                            <div>
+                                <h3>Describe the evidence</h3>
+
+                                <p>
+                                    Add useful details without making a
+                                    medical diagnosis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="report-form-grid">
+
+                            <div class="report-field full-width">
+                                <label for="concernDescription">
+                                    Detailed observation *
+                                </label>
+
+                                <textarea
+                                    id="concernDescription"
+                                    name="concernDescription"
+                                    rows="7"
+                                    maxlength="1000"
+                                    placeholder="Describe what you observed, when it started and whether the situation is changing."
+                                    required
+                                ></textarea>
+
+                                <div class="report-field-meta">
+                                    <small>
+                                        Include only relevant factual
+                                        observations.
+                                    </small>
+
+                                    <small>
+                                        <span id="descriptionCharacterCount">
+                                            0
+                                        </span>/1000
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="urgencyLevel">
+                                    Perceived urgency *
+                                </label>
+
+                                <select
+                                    id="urgencyLevel"
+                                    name="urgencyLevel"
+                                    required
+                                >
+                                    <option value="">
+                                        Select urgency
+                                    </option>
+
+                                    <option value="Low">
+                                        Low — monitor routinely
+                                    </option>
+
+                                    <option value="Moderate">
+                                        Moderate — verification needed
+                                    </option>
+
+                                    <option value="High">
+                                        High — prompt review requested
+                                    </option>
+
+                                    <option value="Critical">
+                                        Critical — serious immediate concern
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="symptomPattern">
+                                    Observed symptom pattern
+                                </label>
+
+                                <select
+                                    id="symptomPattern"
+                                    name="symptomPattern"
+                                >
+                                    <option value="">
+                                        No symptoms reported
+                                    </option>
+
+                                    <option value="Diarrhoea">
+                                        Diarrhoea
+                                    </option>
+
+                                    <option value="Vomiting">
+                                        Vomiting
+                                    </option>
+
+                                    <option value="Fever">
+                                        Fever
+                                    </option>
+
+                                    <option value="Jaundice">
+                                        Jaundice
+                                    </option>
+
+                                    <option value="Abdominal pain">
+                                        Abdominal pain
+                                    </option>
+
+                                    <option value="Multiple symptoms">
+                                        Multiple symptoms
+                                    </option>
+
+                                    <option value="Other symptoms">
+                                        Other symptoms
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="waterAppearance">
+                                    Water appearance
+                                </label>
+
+                                <select
+                                    id="waterAppearance"
+                                    name="waterAppearance"
+                                >
+                                    <option value="">
+                                        No observation
+                                    </option>
+
+                                    <option value="Clear">
+                                        Clear
+                                    </option>
+
+                                    <option value="Cloudy">
+                                        Cloudy
+                                    </option>
+
+                                    <option value="Discoloured">
+                                        Discoloured
+                                    </option>
+
+                                    <option value="Visible particles">
+                                        Visible particles
+                                    </option>
+
+                                    <option value="Foam or surface layer">
+                                        Foam or surface layer
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="report-field">
+                                <label for="waterOdour">
+                                    Water smell
+                                </label>
+
+                                <select
+                                    id="waterOdour"
+                                    name="waterOdour"
+                                >
+                                    <option value="">
+                                        No observation
+                                    </option>
+
+                                    <option value="No unusual smell">
+                                        No unusual smell
+                                    </option>
+
+                                    <option value="Sewage-like smell">
+                                        Sewage-like smell
+                                    </option>
+
+                                    <option value="Chemical smell">
+                                        Chemical smell
+                                    </option>
+
+                                    <option value="Rotten smell">
+                                        Rotten smell
+                                    </option>
+
+                                    <option value="Other unusual smell">
+                                        Other unusual smell
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Photo upload -->
+
+                        <div class="report-upload-section">
+                            <div class="report-upload-heading">
+                                <div>
+                                    <h4>Supporting photograph</h4>
+
+                                    <p>
+                                        Optional. Upload one JPG, PNG or WEBP
+                                        image smaller than 4 MB.
+                                    </p>
+                                </div>
+
+                                <span>Optional</span>
+                            </div>
+
+                            <label
+                                class="report-upload-area"
+                                id="reportUploadArea"
+                                for="reportPhoto"
+                            >
+                                <input
+                                    type="file"
+                                    id="reportPhoto"
+                                    name="reportPhoto"
+                                    accept="image/jpeg,image/png,image/webp"
+                                >
+
+                                <span class="report-upload-icon">＋</span>
+
+                                <strong>
+                                    Choose a supporting image
+                                </strong>
+
+                                <small>
+                                    Avoid including faces, documents or
+                                    personal information.
+                                </small>
+                            </label>
+
+                            <div
+                                class="report-photo-preview"
+                                id="reportPhotoPreview"
+                                hidden
+                            >
+                                <img
+                                    id="reportPhotoPreviewImage"
+                                    src=""
+                                    alt="Selected report photograph preview"
+                                >
+
+                                <div>
+                                    <strong id="reportPhotoName">
+                                        Selected photograph
+                                    </strong>
+
+                                    <small id="reportPhotoSize"></small>
+
+                                    <button
+                                        type="button"
+                                        id="removeReportPhoto"
+                                    >
+                                        Remove Image
+                                    </button>
+                                </div>
+                            </div>
+
+                            <p
+                                class="report-field-error"
+                                id="photoUploadError"
+                                role="alert"
+                            ></p>
+                        </div>
+
+                        <!-- Reporter identity -->
+
+                        <div class="report-identity-section">
+                            <div class="report-identity-heading">
+                                <div>
+                                    <h4>Reporter information</h4>
+
+                                    <p>
+                                        You may submit anonymously or provide
+                                        contact details for clarification.
+                                    </p>
+                                </div>
+
+                                <label class="report-switch">
+                                    <input
+                                        type="checkbox"
+                                        id="anonymousReport"
+                                        name="anonymousReport"
+                                    >
+
+                                    <span class="report-switch-track"></span>
+
+                                    <strong>Submit anonymously</strong>
+                                </label>
+                            </div>
+
+                            <div
+                                class="report-form-grid"
+                                id="reporterFields"
+                            >
+                                <div class="report-field">
+                                    <label for="reporterName">
+                                        Full name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="reporterName"
+                                        name="reporterName"
+                                        placeholder="Enter your name"
+                                    >
+                                </div>
+
+                                <div class="report-field">
+                                    <label for="reporterRole">
+                                        Community role
+                                    </label>
+
+                                    <select
+                                        id="reporterRole"
+                                        name="reporterRole"
+                                    >
+                                        <option value="">
+                                            Select role
+                                        </option>
+
+                                        <option value="Community member">
+                                            Community member
+                                        </option>
+
+                                        <option value="Health worker">
+                                            Health worker
+                                        </option>
+
+                                        <option value="Teacher">
+                                            Teacher
+                                        </option>
+
+                                        <option value="Student">
+                                            Student
+                                        </option>
+
+                                        <option value="Local official">
+                                            Local official
+                                        </option>
+
+                                        <option value="Volunteer">
+                                            Volunteer
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="report-field">
+                                    <label for="reporterPhone">
+                                        Phone number
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="reporterPhone"
+                                        name="reporterPhone"
+                                        inputmode="tel"
+                                        maxlength="15"
+                                        placeholder="Enter phone number"
+                                    >
+                                </div>
+
+                                <div class="report-field">
+                                    <label for="reporterEmail">
+                                        Email address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="reporterEmail"
+                                        name="reporterEmail"
+                                        placeholder="name@example.com"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- =====================================
+                         STEP 4
+                         ===================================== -->
+
+                    <section
+                        class="report-form-step"
+                        data-report-step="4"
+                        hidden
+                    >
+                        <div class="report-form-step-heading">
+                            <span>Step 04</span>
+
+                            <div>
+                                <h3>Review the report</h3>
+
+                                <p>
+                                    Confirm that the information is accurate
+                                    before creating the prototype report.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="report-review-card"
+                            id="reportReviewCard"
+                        >
+                            <div class="report-review-placeholder">
+                                Your report summary will appear here.
+                            </div>
+                        </div>
+
+                        <div class="report-consent-card">
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="accuracyConsent"
+                                    name="accuracyConsent"
+                                    required
+                                >
+
+                                <span>
+                                    I confirm that this report is based on
+                                    observations provided in good faith and
+                                    is accurate to the best of my knowledge.
+                                </span>
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="prototypeConsent"
+                                    name="prototypeConsent"
+                                    required
+                                >
+
+                                <span>
+                                    I understand that this is a demonstration
+                                    platform. Submitting this form does not
+                                    contact emergency services or government
+                                    authorities.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="report-final-notice">
+                            <strong>Before submitting</strong>
+
+                            <p>
+                                The prototype will store a simplified report
+                                record in this browser. The selected image
+                                itself will not be permanently stored.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Navigation buttons -->
+
+                    <div class="report-form-navigation">
+
+                        <button
+                            type="button"
+                            id="previousReportStep"
+                            class="report-back-button"
+                            hidden
+                        >
+                            ← Previous Step
+                        </button>
+
+                        <button
+                            type="button"
+                            id="nextReportStep"
+                            class="report-next-button"
+                        >
+                            Continue →
+                        </button>
+
+                        <button
+                            type="submit"
+                            id="submitCommunityReport"
+                            class="report-submit-button"
+                            hidden
+                        >
+                            Submit Prototype Report
+                        </button>
+                    </div>
+
+                    <div
+                        class="report-form-message"
+                        id="reportFormMessage"
+                        role="alert"
+                        hidden
+                    ></div>
+                </form>
+
+                <!-- Sidebar -->
+
+                <aside class="report-support-sidebar">
+
+                    <div class="report-sidebar-card report-sidebar-primary">
+                        <span class="report-sidebar-label">
+                            Reporting guidance
+                        </span>
+
+                        <h3>What makes a useful report?</h3>
+
+                        <ul>
+                            <li>
+                                Provide the clearest possible location.
+                            </li>
+
+                            <li>
+                                Describe what you directly observed.
+                            </li>
+
+                            <li>
+                                Mention when the problem began.
+                            </li>
+
+                            <li>
+                                Avoid making an unverified diagnosis.
+                            </li>
+
+                            <li>
+                                Protect the privacy of affected people.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="report-sidebar-card">
+                        <span class="report-sidebar-icon">P</span>
+
+                        <div>
+                            <h3>Privacy first</h3>
+
+                            <p>
+                                Do not upload medical records, identity
+                                documents or photographs showing identifiable
+                                people.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="report-sidebar-card">
+                        <span class="report-sidebar-icon">V</span>
+
+                        <div>
+                            <h3>Verification required</h3>
+
+                            <p>
+                                Community reports are preliminary signals.
+                                Professional field and laboratory verification
+                                is always required.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="report-sidebar-card">
+                        <span class="report-sidebar-icon">AI</span>
+
+                        <div>
+                            <h3>AquaAI-ready format</h3>
+
+                            <p>
+                                Structured reporting helps future models
+                                combine community observations with verified
+                                environmental and health data.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- =================================================
+             RECENT LOCAL REPORT
+             ================================================= -->
+
+        <section class="recent-report-section">
+
+            <div class="report-section-heading">
+                <p class="eyebrow">YOUR DEVICE</p>
+
+                <h2>Most recent prototype report</h2>
+
+                <p>
+                    The latest report stored in this browser will appear
+                    below after a successful submission.
+                </p>
+            </div>
+
+            <div
+                class="recent-report-card"
+                id="recentReportCard"
+            >
+                <div class="recent-report-empty">
+                    <span>CR</span>
+
+                    <div>
+                        <h3>No report submitted yet</h3>
+
+                        <p>
+                            Complete the reporting form to generate your first
+                            prototype community report.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             DISCLAIMER
+             ================================================= -->
+
+        <section class="report-disclaimer-section">
+
+            <div class="report-disclaimer-icon">i</div>
+
+            <div>
+                <h2>Prototype and safety notice</h2>
+
+                <p>
+                    AquaSentinel AI currently demonstrates a frontend
+                    community-reporting workflow. Reports remain on the
+                    current device unless a secure backend is connected.
+                    The platform does not provide medical diagnoses and does
+                    not replace official public-health reporting channels,
+                    laboratories, healthcare professionals or emergency
+                    services.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-copy">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Community-centred intelligence for safer water
+                    and healthier communities.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <strong>Platform</strong>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+            </div>
+
+            <div class="footer-links">
+                <strong>Community</strong>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Prototype health-intelligence platform.
+            </p>
+
+            <p>
+                Interface updated:
+                <span id="pageUpdatedTime">Loading...</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="report.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Detailed safe-water, sanitation and waterborne disease prevention guidance from AquaSentinel AI."
+    >
+
+    <title>Health Guidance | AquaSentinel AI</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="guidance-details-page">
+
+    <!-- Header -->
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a href="index.html" class="brand">
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html" class="active">
+                    Awareness
+                </a>
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Loading state -->
+
+        <section
+            class="guidance-loading-state"
+            id="guidanceLoadingState"
+            aria-live="polite"
+        >
+            <div class="guidance-loading-spinner"></div>
+            <p>Preparing health guidance...</p>
+        </section>
+
+        <!-- Topic not found -->
+
+        <section
+            class="guidance-not-found"
+            id="guidanceNotFound"
+            hidden
+        >
+            <div class="guidance-not-found-icon">!</div>
+
+            <p class="eyebrow">GUIDANCE NOT FOUND</p>
+
+            <h1>We could not find this guidance topic.</h1>
+
+            <p>
+                Return to the Awareness Centre and select one of the
+                available health and safe-water guidance topics.
+            </p>
+
+            <a href="awareness.html" class="primary-button">
+                Return to Awareness
+            </a>
+        </section>
+
+        <!-- Dynamic guidance content -->
+
+        <div id="guidanceDetailContent" hidden>
+
+            <!-- Breadcrumb -->
+
+            <nav
+                class="guidance-breadcrumb"
+                aria-label="Breadcrumb"
+            >
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="awareness.html">Awareness</a>
+                <span>›</span>
+                <strong id="guidanceBreadcrumbTopic">
+                    Guidance topic
+                </strong>
+            </nav>
+
+            <!-- Hero -->
+
+            <section class="guidance-details-hero">
+
+                <div class="guidance-details-hero-content">
+
+                    <div class="guidance-detail-status">
+                        <span class="status-dot"></span>
+                        Practical prevention guidance
+                    </div>
+
+                    <p
+                        class="eyebrow"
+                        id="guidanceDetailCategory"
+                    >
+                        HEALTH GUIDANCE
+                    </p>
+
+                    <h1 id="guidanceDetailTitle">
+                        Health guidance
+                    </h1>
+
+                    <p
+                        class="guidance-detail-summary"
+                        id="guidanceDetailSummary"
+                    >
+                        Loading guidance information...
+                    </p>
+
+                    <div class="guidance-detail-actions">
+                        <a
+                            href="#guidanceOverview"
+                            class="primary-button"
+                        >
+                            Read Guidance
+                        </a>
+
+                        <a
+                            href="report.html"
+                            class="secondary-button"
+                        >
+                            Report a Concern
+                        </a>
+                    </div>
+
+                    <div class="guidance-detail-labels">
+                        <span>English-only guidance</span>
+                        <span>Community safety</span>
+                        <span>Professional verification advised</span>
+                    </div>
+                </div>
+
+                <div class="guidance-detail-visual">
+
+                    <img
+                        id="guidanceDetailImage"
+                        src=""
+                        alt=""
+                        loading="eager"
+                        referrerpolicy="no-referrer"
+                    >
+
+                    <div class="guidance-image-overlay"></div>
+
+                    <div class="guidance-image-card guidance-image-card-top">
+                        <span class="guidance-image-card-icon">01</span>
+
+                        <span>
+                            <small>Understand</small>
+                            <strong>Recognise the risk</strong>
+                        </span>
+                    </div>
+
+                    <div class="guidance-image-card guidance-image-card-bottom">
+                        <span class="guidance-image-card-icon">02</span>
+
+                        <span>
+                            <small>Take action</small>
+                            <strong>Protect your household</strong>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Important disclaimer -->
+
+            <section class="guidance-disclaimer">
+                <span class="guidance-disclaimer-icon">i</span>
+
+                <div>
+                    <strong>Important health information</strong>
+
+                    <p>
+                        This page provides general educational guidance.
+                        It does not replace professional medical diagnosis,
+                        treatment, laboratory testing or instructions from
+                        local health authorities.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Main information area -->
+
+            <section
+                class="guidance-analysis-layout"
+                id="guidanceOverview"
+            >
+
+                <div class="guidance-main-column">
+
+                    <!-- Overview -->
+
+                    <article class="guidance-content-card">
+                        <div class="guidance-card-heading">
+                            <span class="guidance-section-number">01</span>
+
+                            <div>
+                                <p class="eyebrow">OVERVIEW</p>
+                                <h2>What you should know</h2>
+                            </div>
+                        </div>
+
+                        <p
+                            class="guidance-overview-text"
+                            id="guidanceDetailOverview"
+                        >
+                            Guidance overview will appear here.
+                        </p>
+                    </article>
+
+                    <!-- Risk or transmission -->
+
+                    <article class="guidance-content-card">
+                        <div class="guidance-card-heading">
+                            <span class="guidance-section-number">02</span>
+
+                            <div>
+                                <p class="eyebrow">HOW RISK DEVELOPS</p>
+                                <h2 id="guidanceRiskHeading">
+                                    Common risk factors
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div
+                            class="guidance-information-grid"
+                            id="guidanceRiskFactors"
+                        ></div>
+                    </article>
+
+                    <!-- Warning signs -->
+
+                    <article class="guidance-content-card">
+                        <div class="guidance-card-heading">
+                            <span class="guidance-section-number">03</span>
+
+                            <div>
+                                <p class="eyebrow">RECOGNITION</p>
+                                <h2 id="guidanceSignsHeading">
+                                    Important warning signs
+                                </h2>
+                            </div>
+                        </div>
+
+                        <ul
+                            class="guidance-check-list guidance-sign-list"
+                            id="guidanceWarningSigns"
+                        ></ul>
+                    </article>
+
+                    <!-- Prevention -->
+
+                    <article class="guidance-content-card">
+                        <div class="guidance-card-heading">
+                            <span class="guidance-section-number">04</span>
+
+                            <div>
+                                <p class="eyebrow">PREVENTION</p>
+                                <h2>Practical protective actions</h2>
+                            </div>
+                        </div>
+
+                        <div
+                            class="guidance-action-grid"
+                            id="guidancePreventionActions"
+                        ></div>
+                    </article>
+
+                    <!-- Immediate action -->
+
+                    <article class="guidance-content-card guidance-action-card">
+                        <div class="guidance-card-heading">
+                            <span class="guidance-section-number">05</span>
+
+                            <div>
+                                <p class="eyebrow">IMMEDIATE RESPONSE</p>
+                                <h2>What to do now</h2>
+                            </div>
+                        </div>
+
+                        <ol
+                            class="guidance-numbered-list"
+                            id="guidanceImmediateActions"
+                        ></ol>
+                    </article>
+
+                    <!-- Avoid section -->
+
+                    <article class="guidance-content-card guidance-avoid-card">
+                        <div class="guidance-card-heading">
+                            <span class="guidance-section-number">06</span>
+
+                            <div>
+                                <p class="eyebrow">AVOID THESE MISTAKES</p>
+                                <h2>Actions that may increase risk</h2>
+                            </div>
+                        </div>
+
+                        <ul
+                            class="guidance-avoid-list"
+                            id="guidanceAvoidList"
+                        ></ul>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+
+                <aside class="guidance-detail-sidebar">
+
+                    <section class="guidance-emergency-card">
+                        <span class="guidance-emergency-label">
+                            Seek urgent care
+                        </span>
+
+                        <h2>Emergency warning signs</h2>
+
+                        <p>
+                            Seek immediate professional medical care when
+                            severe or rapidly worsening symptoms occur.
+                        </p>
+
+                        <ul id="guidanceEmergencySigns"></ul>
+
+                        <a href="report.html" class="guidance-sidebar-button">
+                            Report Community Concern
+                        </a>
+                    </section>
+
+                    <section class="guidance-source-card">
+                        <div class="guidance-sidebar-icon">✓</div>
+
+                        <p class="eyebrow">TRUSTED INFORMATION</p>
+
+                        <h2>Official references</h2>
+
+                        <p>
+                            Learn more through recognised public-health
+                            organisations.
+                        </p>
+
+                        <div
+                            class="guidance-source-links"
+                            id="guidanceOfficialSources"
+                        ></div>
+                    </section>
+
+                    <section class="guidance-support-card">
+                        <div class="guidance-sidebar-icon">AI</div>
+
+                        <p class="eyebrow">AQUASENTINEL SUPPORT</p>
+
+                        <h2>Evaluate local conditions</h2>
+
+                        <p>
+                            Use AquaAI Lab to explore a prototype risk
+                            assessment based on environmental and
+                            community-health observations.
+                        </p>
+
+                        <a href="ai-lab.html">
+                            Open AquaAI Lab →
+                        </a>
+                    </section>
+                </aside>
+            </section>
+
+            <!-- Topic navigation -->
+
+            <section class="guidance-topic-navigation">
+
+                <div>
+                    <p class="eyebrow">EXPLORE ANOTHER TOPIC</p>
+                    <h2>Continue learning</h2>
+
+                    <p>
+                        Select another health or safe-water topic without
+                        returning to the previous page.
+                    </p>
+                </div>
+
+                <div class="guidance-topic-selector">
+                    <label for="guidanceTopicSelector">
+                        Guidance topic
+                    </label>
+
+                    <select id="guidanceTopicSelector">
+                        <option value="safe-water">
+                            Safe drinking water
+                        </option>
+
+                        <option value="hand-hygiene">
+                            Hand hygiene
+                        </option>
+
+                        <option value="diarrhoea">
+                            Diarrhoeal illness
+                        </option>
+
+                        <option value="cholera">
+                            Cholera
+                        </option>
+
+                        <option value="typhoid">
+                            Typhoid
+                        </option>
+
+                        <option value="hepatitis-a">
+                            Hepatitis A
+                        </option>
+
+                        <option value="dysentery">
+                            Dysentery
+                        </option>
+
+                        <option value="flood-safety">
+                            Flood-water safety
+                        </option>
+
+                        <option value="sanitation">
+                            Household sanitation
+                        </option>
+
+                        <option value="food-safety">
+                            Food safety
+                        </option>
+
+                        <option value="emergency-signs">
+                            Emergency warning signs
+                        </option>
+
+                        <option value="community-reporting">
+                            Community reporting
+                        </option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Related topics -->
+
+            <section class="related-guidance-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">KEEP LEARNING</p>
+                        <h2>Related safety guidance</h2>
+                    </div>
+
+                    <a href="awareness.html">
+                        View all guidance →
+                    </a>
+                </div>
+
+                <div
+                    class="related-guidance-grid"
+                    id="relatedGuidanceGrid"
+                ></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+
+            <div>
+                <a href="index.html" class="brand footer-brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence and practical health
+                    guidance for safer communities.
+                </p>
+            </div>
+
+            <div>
+                <strong>Platform</strong>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+            </div>
+
+            <div>
+                <strong>Community</strong>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+            </div>
+
+            <div>
+                <strong>Important</strong>
+
+                <p>
+                    Prototype guidance must be verified through qualified
+                    health professionals and official authorities.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                All rights reserved.
+            </p>
+
+            <p>
+                Prototype community-health intelligence platform
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="guidance-details.js?v=1"></script>
+</body>
+</html>

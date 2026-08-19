@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore prototype waterborne disease risk indicators across the eight states of Northeast India."
+    >
+
+    <title>Risk Map | AquaSentinel AI</title>
+
+    <!-- Leaflet map CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+>
+
+    <!-- Main website CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="AquaSentinel home"
+            >
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html" class="active">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="risk-map-page">
+        <!-- Page introduction -->
+        <section class="map-page-hero">
+            <div class="map-hero-content">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Regional health intelligence
+                </div>
+
+                <p class="eyebrow">NORTHEAST INDIA MONITORING</p>
+
+                <h1>
+                    Interactive Waterborne
+                    <span>Disease Risk Map</span>
+                </h1>
+
+                <p>
+                    Explore prototype environmental and health-surveillance
+                    signals across the eight states of Northeast India.
+                    Select a state or map marker to examine its current
+                    demonstration risk profile.
+                </p>
+
+                <div class="map-hero-actions">
+                    <a href="#riskDashboard" class="primary-button">
+                        Open Map Dashboard
+                    </a>
+
+                    <a href="ai-lab.html" class="secondary-button">
+                        Analyse with AquaAI
+                    </a>
+                </div>
+
+                <div class="map-hero-tags">
+                    <span>08 states</span>
+                    <span>B1 environmental indicators</span>
+                    <span>B2 health surveillance</span>
+                    <span>English interface</span>
+                </div>
+            </div>
+
+            <div class="map-hero-image" aria-label="Water monitoring landscape">
+                <div class="map-image-overlay">
+                    <span class="map-image-icon">AI</span>
+
+                    <div>
+                        <strong>Regional Intelligence</strong>
+                        <small>
+                            Environmental and community health monitoring
+                        </small>
+                    </div>
+                </div>
+
+                <div class="floating-data-card floating-card-one">
+                    <span>Water Quality</span>
+                    <strong>Monitoring</strong>
+                </div>
+
+                <div class="floating-data-card floating-card-two">
+                    <span>Health Signals</span>
+                    <strong>Analysed</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary cards -->
+        <section class="map-summary-section">
+            <article class="map-summary-card summary-blue">
+                <div class="summary-icon">08</div>
+
+                <div>
+                    <span>Coverage</span>
+                    <strong>States Monitored</strong>
+                    <small>Northeast regional prototype</small>
+                </div>
+            </article>
+
+            <article class="map-summary-card summary-aqua">
+                <div class="summary-icon">B1</div>
+
+                <div>
+                    <span>Environmental</span>
+                    <strong>Risk Indicators</strong>
+                    <small>Water and weather conditions</small>
+                </div>
+            </article>
+
+            <article class="map-summary-card summary-violet">
+                <div class="summary-icon">B2</div>
+
+                <div>
+                    <span>Surveillance</span>
+                    <strong>Health Signals</strong>
+                    <small>Reported illness patterns</small>
+                </div>
+            </article>
+
+            <article class="map-summary-card summary-coral">
+                <div class="summary-icon">AI</div>
+
+                <div>
+                    <span>Risk Fusion</span>
+                    <strong>AquaAI Insight</strong>
+                    <small>Explainable prototype analysis</small>
+                </div>
+            </article>
+        </section>
+
+        <!-- Risk-map dashboard -->
+        <section
+            class="risk-map-dashboard"
+            id="riskDashboard"
+            aria-label="Risk map dashboard"
+        >
+            <!-- Dashboard toolbar -->
+            <div class="map-dashboard-toolbar">
+                <div>
+                    <p class="eyebrow">REGIONAL DASHBOARD</p>
+                    <h2>Northeast India Risk Intelligence</h2>
+
+                    <p>
+                        Select a state to view its prototype risk details.
+                    </p>
+                </div>
+
+                <div class="map-toolbar-controls">
+                    <label for="stateFilter">
+                        Select state
+                    </label>
+
+                    <select id="stateFilter">
+                        <option value="all">All Northeast states</option>
+                        <option value="Arunachal Pradesh">
+                            Arunachal Pradesh
+                        </option>
+                        <option value="Assam">Assam</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tripura">Tripura</option>
+                    </select>
+
+                    <button
+                        id="resetMapButton"
+                        class="map-reset-button"
+                        type="button"
+                    >
+                        Reset Map
+                    </button>
+                </div>
+            </div>
+
+            <div class="map-dashboard-layout">
+                <!-- Map panel -->
+                <div class="map-main-panel">
+                    <div class="map-panel-heading">
+                        <div>
+                            <span class="panel-label">INTERACTIVE MAP</span>
+                            <h3>Regional Risk Distribution</h3>
+                        </div>
+
+                        <div class="map-connection-status">
+                            <span class="status-dot"></span>
+                            Map ready
+                        </div>
+                    </div>
+
+                    <div class="map-container-wrapper">
+                        <div
+                            id="map"
+                            role="application"
+                            aria-label="Interactive map of Northeast India"
+                        >
+                            <div class="map-loading" id="mapLoading">
+                                <span class="map-loading-spinner"></span>
+
+                                <strong>Preparing regional map</strong>
+
+                                <small>
+                                    Loading state boundaries and risk data...
+                                </small>
+                            </div>
+                        </div>
+
+                        <!-- Risk legend -->
+                        <div class="risk-map-legend" aria-label="Risk legend">
+                            <strong>Risk level</strong>
+
+                            <span>
+                                <i class="legend-low"></i>
+                                Low
+                            </span>
+
+                            <span>
+                                <i class="legend-moderate"></i>
+                                Moderate
+                            </span>
+
+                            <span>
+                                <i class="legend-high"></i>
+                                High
+                            </span>
+
+                            <span>
+                                <i class="legend-critical"></i>
+                                Critical
+                            </span>
+
+                            <span>
+                                <i class="legend-unavailable"></i>
+                                Data unavailable
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="map-help-row">
+                        <span>
+                            Click a state boundary or marker for details.
+                        </span>
+
+                        <span>
+                            Use your mouse or touch controls to zoom.
+                        </span>
+                    </div>
+                </div>
+
+                <!-- State details -->
+                <aside class="state-detail-panel" id="stateDetailPanel">
+                    <div class="state-panel-placeholder" id="statePlaceholder">
+                        <div class="placeholder-icon">NE</div>
+
+                        <h3>Select a state</h3>
+
+                        <p>
+                            Choose a state from the map or dropdown to view
+                            environmental and health-surveillance indicators.
+                        </p>
+                    </div>
+
+                    <div
+                        class="state-panel-content"
+                        id="statePanelContent"
+                        hidden
+                    >
+                        <div class="state-panel-header">
+                            <div>
+                                <span class="panel-label">
+                                    SELECTED REGION
+                                </span>
+
+                                <h3 id="selectedStateName">
+                                    Assam
+                                </h3>
+                            </div>
+
+                            <span
+                                class="state-risk-badge"
+                                id="selectedRiskBadge"
+                            >
+                                Moderate
+                            </span>
+                        </div>
+
+                        <div class="state-score-section">
+                            <div
+                                class="state-risk-score"
+                                id="stateRiskScore"
+                            >
+                                58
+                            </div>
+
+                            <div>
+                                <span>Combined risk score</span>
+
+                                <strong id="riskScoreLabel">
+                                    Moderate attention required
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="state-indicator-grid">
+                            <article>
+                                <span>B1 Environmental Risk</span>
+                                <strong id="environmentalRisk">
+                                    62%
+                                </strong>
+                            </article>
+
+                            <article>
+                                <span>B2 Health Signal</span>
+                                <strong id="healthSignal">
+                                    Stable
+                                </strong>
+                            </article>
+
+                            <article>
+                                <span>Primary Concern</span>
+                                <strong id="primaryDisease">
+                                    Diarrhoeal disease
+                                </strong>
+                            </article>
+
+                            <article>
+                                <span>Trend</span>
+                                <strong id="riskTrend">
+                                    Monitoring
+                                </strong>
+                            </article>
+                        </div>
+
+                        <div class="risk-progress-group">
+                            <div class="risk-progress-heading">
+                                <span>Environmental contribution</span>
+                                <strong id="environmentProgressText">
+                                    62%
+                                </strong>
+                            </div>
+
+                            <div class="risk-progress-track">
+                                <span
+                                    id="environmentProgressBar"
+                                    style="width: 62%;"
+                                ></span>
+                            </div>
+                        </div>
+
+                        <div class="risk-progress-group">
+                            <div class="risk-progress-heading">
+                                <span>Health-signal contribution</span>
+                                <strong id="healthProgressText">
+                                    54%
+                                </strong>
+                            </div>
+
+                            <div class="risk-progress-track health-progress">
+                                <span
+                                    id="healthProgressBar"
+                                    style="width: 54%;"
+                                ></span>
+                            </div>
+                        </div>
+
+                        <div class="ai-map-insight">
+                            <div class="ai-insight-heading">
+                                <span class="ai-insight-icon">AI</span>
+
+                                <div>
+                                    <strong>AquaAI Explanation</strong>
+                                    <small>Prototype interpretation</small>
+                                </div>
+                            </div>
+
+                            <p id="stateAIExplanation">
+                                Select a state to generate a clear explanation
+                                of its current prototype risk indicators.
+                            </p>
+                        </div>
+
+                        <div class="recommended-action">
+                            <span>Recommended monitoring action</span>
+
+                            <p id="recommendedAction">
+                                Continue routine environmental and community
+                                health monitoring.
+                            </p>
+                        </div>
+
+                        <a
+                            href="ai-lab.html"
+                            class="primary-button state-ai-button"
+                        >
+                            Open Detailed AI Analysis
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- State overview -->
+        <section class="state-overview-section">
+            <div class="section-heading">
+                <p class="eyebrow">REGIONAL OVERVIEW</p>
+
+                <h2>Eight states, one connected monitoring system</h2>
+
+                <p>
+                    The cards below provide an overview of the prototype
+                    coverage. Selecting a card will focus the corresponding
+                    state on the interactive map.
+                </p>
+            </div>
+
+            <div class="state-card-grid" id="stateCardGrid">
+                <!-- Cards will be generated by risk-map.js -->
+            </div>
+        </section>
+
+        <!-- Data explanation -->
+        <section class="risk-method-section">
+            <div class="risk-method-image">
+                <div class="method-image-content">
+                    <span>Risk Intelligence</span>
+                    <strong>Environment + Health + AI</strong>
+                </div>
+            </div>
+
+            <div class="risk-method-content">
+                <p class="eyebrow">HOW TO READ THE MAP</p>
+
+                <h2>Risk levels combine multiple signals</h2>
+
+                <p>
+                    AquaSentinel separates information into two main signal
+                    groups before producing an overall prototype risk level.
+                </p>
+
+                <div class="method-list">
+                    <article>
+                        <span>B1</span>
+
+                        <div>
+                            <h3>Environmental risk</h3>
+
+                            <p>
+                                Water quality, rainfall, temperature,
+                                sanitation and other environmental factors.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>B2</span>
+
+                        <div>
+                            <h3>Health surveillance</h3>
+
+                            <p>
+                                Community reports, symptom patterns and
+                                available disease-surveillance information.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>AI</span>
+
+                        <div>
+                            <h3>Risk fusion</h3>
+
+                            <p>
+                                Combines B1 and B2 indicators to present an
+                                explainable prototype risk category.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prototype notice -->
+        <section class="prototype-notice-section">
+            <div class="prototype-notice">
+                <span class="notice-icon">i</span>
+
+                <div>
+                    <h2>Prototype demonstration data</h2>
+
+                    <p>
+                        The values displayed on this map are for academic and
+                        prototype demonstration purposes. They are not official
+                        medical diagnoses or government-issued public-health
+                        warnings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page call to action -->
+        <section class="home-cta-section map-cta-section">
+            <div>
+                <p class="eyebrow">NOTICE SOMETHING UNUSUAL?</p>
+
+                <h2>Community observations can strengthen early warning.</h2>
+
+                <p>
+                    Report suspected water contamination, sanitation problems
+                    or unusual illness patterns through the community form.
+                </p>
+            </div>
+
+            <div class="cta-actions">
+                <a href="report.html" class="primary-button">
+                    Report a Concern
+                </a>
+
+                <a href="alerts.html" class="secondary-button">
+                    Review Alerts
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence for safer water and healthier
+                    communities across Northeast India.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Platform</h3>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Smart health intelligence for safer communities.
+            </p>
+
+            <p>Prototype project · English interface</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet map JavaScript -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""
+    ></script>
+
+    <!-- Shared website JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Risk-map page JavaScript -->
+    <script src="risk-map.js?v=6"></script>
+</body>
+</html>

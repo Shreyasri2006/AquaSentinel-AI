@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Review prototype waterborne disease alerts and regional monitoring priorities across Northeast India."
+    >
+
+    <title>Health Alerts | AquaSentinel AI</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="AquaSentinel home"
+            >
+                <span class="brand-icon">A</span>
+
+                <span class="brand-text">
+                    <strong>AquaSentinel</strong>
+                    <small>AI Health Intelligence</small>
+                </span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html" class="active">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+                <a href="awareness.html">Awareness</a>
+
+                <a href="login.html" class="login-button">
+                    Official Login
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="alerts-page">
+        <!-- Breadcrumb -->
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <strong>Health Alerts</strong>
+        </nav>
+
+        <!-- Hero -->
+        <section class="alerts-hero">
+            <div class="alerts-hero-content">
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Regional early-warning centre
+                </div>
+
+                <p class="eyebrow">
+                    WATERBORNE DISEASE SURVEILLANCE
+                </p>
+
+                <h1>
+                    Regional Health
+                    <span>Alerts and Priorities</span>
+                </h1>
+
+                <p>
+                    Review prototype water-quality warnings,
+                    environmental signals and community health-monitoring
+                    priorities across Northeast India.
+                </p>
+
+                <div class="alerts-hero-actions">
+                    <a href="#alertsDashboard" class="primary-button">
+                        Review Current Alerts
+                    </a>
+
+                    <a href="report.html" class="secondary-button">
+                        Report a Concern
+                    </a>
+                </div>
+
+                <div class="alerts-hero-tags">
+                    <span>Eight Northeast states</span>
+                    <span>Severity classification</span>
+                    <span>Community reporting</span>
+                    <span>Prototype intelligence</span>
+                </div>
+            </div>
+
+            <div class="alerts-hero-visual">
+                <div class="alert-visual-status">
+                    <span class="alert-visual-icon">!</span>
+
+                    <div>
+                        <strong>Early Warning Intelligence</strong>
+
+                        <small>
+                            Monitor, understand and respond
+                        </small>
+                    </div>
+                </div>
+
+                <div class="alert-floating-card alert-floating-critical">
+                    <span>Critical</span>
+                    <strong id="heroCriticalCount">01 priority</strong>
+                </div>
+
+                <div class="alert-floating-card alert-floating-monitoring">
+                    <span>System</span>
+                    <strong>Monitoring active</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary -->
+        <section class="alert-summary-section">
+            <article class="alert-summary-card summary-total">
+                <div class="alert-summary-icon">A</div>
+
+                <div>
+                    <span>Total alerts</span>
+                    <strong id="totalAlertCount">00</strong>
+                    <small>All prototype records</small>
+                </div>
+            </article>
+
+            <article class="alert-summary-card summary-critical">
+                <div class="alert-summary-icon">!</div>
+
+                <div>
+                    <span>Critical alerts</span>
+                    <strong id="criticalAlertCount">00</strong>
+                    <small>Immediate verification</small>
+                </div>
+            </article>
+
+            <article class="alert-summary-card summary-high">
+                <div class="alert-summary-icon">H</div>
+
+                <div>
+                    <span>High priority</span>
+                    <strong id="highAlertCount">00</strong>
+                    <small>Close monitoring required</small>
+                </div>
+            </article>
+
+            <article class="alert-summary-card summary-resolved">
+                <div class="alert-summary-icon">✓</div>
+
+                <div>
+                    <span>Resolved</span>
+                    <strong id="resolvedAlertCount">00</strong>
+                    <small>Monitoring completed</small>
+                </div>
+            </article>
+        </section>
+
+        <!-- Featured warning -->
+        <section
+            class="featured-alert-section"
+            id="featuredAlertSection"
+        >
+            <div class="featured-alert-content">
+                <div class="featured-alert-heading">
+                    <span class="featured-alert-symbol">!</span>
+
+                    <div>
+                        <p class="eyebrow">PRIORITY PROTOTYPE ALERT</p>
+
+                        <h2 id="featuredAlertTitle">
+                            Preparing priority alert...
+                        </h2>
+                    </div>
+                </div>
+
+                <p id="featuredAlertDescription">
+                    Loading the highest-priority regional monitoring
+                    information.
+                </p>
+
+                <div class="featured-alert-meta">
+                    <span>
+                        State
+                        <strong id="featuredAlertState">Loading</strong>
+                    </span>
+
+                    <span>
+                        Disease signal
+                        <strong id="featuredAlertDisease">Loading</strong>
+                    </span>
+
+                    <span>
+                        Severity
+                        <strong id="featuredAlertSeverity">Loading</strong>
+                    </span>
+
+                    <span>
+                        Status
+                        <strong id="featuredAlertStatus">Loading</strong>
+                    </span>
+                </div>
+
+                <div class="featured-alert-actions">
+                    <a
+                        href="alert-details.html"
+                        class="primary-button"
+                        id="featuredAlertLink"
+                    >
+                        View Full Alert
+                    </a>
+
+                    <a href="risk-map.html" class="secondary-button">
+                        View Risk Map
+                    </a>
+                </div>
+            </div>
+
+            <div class="featured-alert-score">
+                <span>Priority score</span>
+
+                <strong id="featuredPriorityScore">--</strong>
+
+                <small>Prototype classification</small>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section
+            class="alerts-dashboard"
+            id="alertsDashboard"
+        >
+            <div class="alerts-dashboard-heading">
+                <div>
+                    <p class="eyebrow">ALERT DIRECTORY</p>
+
+                    <h2>Current monitoring alerts</h2>
+
+                    <p>
+                        Search and filter prototype alerts by state,
+                        severity and current status.
+                    </p>
+                </div>
+
+                <div class="alerts-last-update">
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <small>Interface updated</small>
+                        <strong id="alertsLastUpdated">Loading...</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="alert-filter-panel">
+                <div class="alert-search-control">
+                    <label for="alertSearch">
+                        Search alerts
+                    </label>
+
+                    <div class="alert-search-box">
+                        <span aria-hidden="true">⌕</span>
+
+                        <input
+                            type="search"
+                            id="alertSearch"
+                            placeholder="Search state, district or disease..."
+                            autocomplete="off"
+                        >
+                    </div>
+                </div>
+
+                <div class="alert-filter-control">
+                    <label for="alertStateFilter">
+                        State
+                    </label>
+
+                    <select id="alertStateFilter">
+                        <option value="all">All states</option>
+                        <option value="Arunachal Pradesh">
+                            Arunachal Pradesh
+                        </option>
+                        <option value="Assam">Assam</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tripura">Tripura</option>
+                    </select>
+                </div>
+
+                <div class="alert-filter-control">
+                    <label for="alertSeverityFilter">
+                        Severity
+                    </label>
+
+                    <select id="alertSeverityFilter">
+                        <option value="all">All severity levels</option>
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Moderate">Moderate</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+                <div class="alert-filter-control">
+                    <label for="alertStatusFilter">
+                        Status
+                    </label>
+
+                    <select id="alertStatusFilter">
+                        <option value="all">All statuses</option>
+                        <option value="Active">Active</option>
+                        <option value="Monitoring">Monitoring</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                </div>
+
+                <button
+                    type="button"
+                    class="alert-reset-button"
+                    id="resetAlertFilters"
+                >
+                    Reset filters
+                </button>
+            </div>
+
+            <!-- Result information -->
+            <div class="alert-results-heading">
+                <p>
+                    Showing
+                    <strong id="visibleAlertCount">0</strong>
+                    alerts
+                </p>
+
+                <div class="alert-view-controls">
+                    <button
+                        type="button"
+                        class="alert-view-button active"
+                        id="alertGridView"
+                        aria-label="Grid view"
+                        title="Grid view"
+                    >
+                        ▦
+                    </button>
+
+                    <button
+                        type="button"
+                        class="alert-view-button"
+                        id="alertListView"
+                        aria-label="List view"
+                        title="List view"
+                    >
+                        ☷
+                    </button>
+                </div>
+            </div>
+
+            <!-- JavaScript-generated alert cards -->
+            <div
+                class="alerts-grid"
+                id="alertsGrid"
+                aria-live="polite"
+            ></div>
+
+            <!-- Empty results -->
+            <div
+                class="alert-empty-state"
+                id="alertEmptyState"
+                hidden
+            >
+                <span>⌕</span>
+
+                <h3>No matching alerts</h3>
+
+                <p>
+                    Try changing your search or filter selections.
+                </p>
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    id="emptyResetButton"
+                >
+                    Clear all filters
+                </button>
+            </div>
+        </section>
+
+        <!-- Alert process -->
+        <section class="alert-process-section">
+            <div class="section-heading">
+                <p class="eyebrow">ALERT WORKFLOW</p>
+
+                <h2>From detection to community response</h2>
+
+                <p>
+                    AquaSentinel organises prototype warnings into a
+                    clear monitoring and response workflow.
+                </p>
+            </div>
+
+            <div class="alert-process-grid">
+                <article>
+                    <span class="alert-process-number">01</span>
+
+                    <h3>Signal detected</h3>
+
+                    <p>
+                        Environmental or community health indicators
+                        move outside their expected prototype range.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="alert-process-number">02</span>
+
+                    <h3>Risk classified</h3>
+
+                    <p>
+                        The combined signal receives a low, moderate,
+                        high or critical classification.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="alert-process-number">03</span>
+
+                    <h3>Information reviewed</h3>
+
+                    <p>
+                        Authorised teams verify available reports and
+                        supporting monitoring information.
+                    </p>
+                </article>
+
+                <article>
+                    <span class="alert-process-number">04</span>
+
+                    <h3>Action recommended</h3>
+
+                    <p>
+                        The platform presents monitoring priorities
+                        and community safety guidance.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Safety guidance -->
+        <section class="alert-guidance-section">
+            <div class="alert-guidance-image">
+                <div>
+                    <span>Community Safety</span>
+                    <strong>Safe water starts with awareness.</strong>
+                </div>
+            </div>
+
+            <div class="alert-guidance-content">
+                <p class="eyebrow">WHEN AN ALERT IS ACTIVE</p>
+
+                <h2>Follow verified safety guidance</h2>
+
+                <p>
+                    Prototype alerts demonstrate how the platform could
+                    support earlier communication and coordinated
+                    monitoring.
+                </p>
+
+                <div class="alert-guidance-list">
+                    <article>
+                        <span>1</span>
+
+                        <div>
+                            <h3>Use safe drinking water</h3>
+
+                            <p>
+                                Use treated, boiled or officially verified
+                                drinking water.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>2</span>
+
+                        <div>
+                            <h3>Monitor symptoms</h3>
+
+                            <p>
+                                Seek professional care for severe or
+                                persistent symptoms.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article>
+                        <span>3</span>
+
+                        <div>
+                            <h3>Report local concerns</h3>
+
+                            <p>
+                                Submit suspected contamination or unusual
+                                illness patterns.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="alert-guidance-actions">
+                    <a href="awareness.html" class="primary-button">
+                        View Prevention Guidance
+                    </a>
+
+                    <a href="report.html" class="secondary-button">
+                        Report a Concern
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prototype notice -->
+        <section class="prototype-notice-section">
+            <div class="prototype-notice">
+                <span class="notice-icon">i</span>
+
+                <div>
+                    <h2>Prototype demonstration alerts</h2>
+
+                    <p>
+                        Alerts, locations, scores and recommendations
+                        displayed here are demonstration data. They are
+                        not official medical diagnoses or government-issued
+                        public-health warnings.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <span class="brand-icon">A</span>
+
+                    <span class="brand-text">
+                        <strong>AquaSentinel</strong>
+                        <small>AI Health Intelligence</small>
+                    </span>
+                </a>
+
+                <p>
+                    Early-warning intelligence for safer water and
+                    healthier communities across Northeast India.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Platform</h3>
+                <a href="risk-map.html">Risk Map</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="ai-lab.html">AI Lab</a>
+                <a href="report.html">Report Concern</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <a href="awareness.html">Awareness</a>
+                <a href="login.html">Official Login</a>
+                <a href="dashboard.html">Dashboard</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="currentYear"></span> AquaSentinel AI.
+                Smart health intelligence for safer communities.
+            </p>
+
+            <p>Prototype project · English interface</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="alerts.js?v=1"></script>
+</body>
+</html>
